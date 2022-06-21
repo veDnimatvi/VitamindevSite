@@ -1,0 +1,12 @@
+.navbar {
+  background: #171717;
+  color: white;
+  & > div {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    font-family: "Noto Serif", serif;
+    padding: 50px;
+    font-size: 20px;
+  }
+}
