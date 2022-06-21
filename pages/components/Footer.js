@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
         <div
           className="icon github"
-          onClick={() => window.open("https://github.com/vitamindev100")}
+          onClick={() => window.open("https://github.com/vitamindevplus")}
         >
           <div className="tooltip">GitHub</div>
           <span>
