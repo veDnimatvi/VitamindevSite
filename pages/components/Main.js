@@ -8,6 +8,7 @@ import twitter from "../../public/img/twitter-100.png";
 
 import MySkill from "./MySkill";
 import Hobbies from "./Hobbies";
+import Link from "next/link";
 import Navbar from "./Navbar";
 
 export default function Main() {
@@ -41,7 +42,7 @@ export default function Main() {
         <div className="snowflake">❅</div>
         <div className="snowflake">❆</div>
       </div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="my-header">
         <div className="my-avatar">
           <Image className="logo2" src={img} alt="a" width={150} height={150} />
@@ -125,6 +126,14 @@ export default function Main() {
 
         <MySkill />
         <Hobbies />
+        <div
+          className="flex justify-around pb-8 text-xl cursor-pointer text-fuchsia-400"
+          style={{ fontFamily: '"Noto Serif", serif' }}
+        >
+          <Link href="/my-vitamin">
+            <div>Visit to my Vitamin (Blog)</div>
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -1,7 +1,10 @@
 import matter from "gray-matter";
 import Navbar from "./components/Navbar";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Footer from "./components/Footer";
+import Link from "next/link";
+import iconTurnLeft from "../public/img/turn-to-left-25.png";
 
 export default function MyBlog(props) {
   const router = useRouter();
@@ -64,8 +67,19 @@ export default function MyBlog(props) {
   return (
     // <Layout>
     <section id="index-page">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="main">
+        <div
+          className="flex justify-around pb-5 text-xl text-green-600 cursor-pointer"
+          style={{ fontFamily: '"Noto Serif", serif' }}
+        >
+          <Link href="/">
+            <div>
+              Back to my Profile
+              <Image className="mt-1" src={iconTurnLeft} alt="turn-left-icon" />
+            </div>
+          </Link>
+        </div>
         <p className="welcome">Welcome to My Vitamin</p>
         <div className="blogs-container">
           {listItems?.map((blog, i) => (

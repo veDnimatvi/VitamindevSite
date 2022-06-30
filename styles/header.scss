@@ -8,7 +8,7 @@
   align-items: center;
   margin-left: 50%;
   transform: translate(-50%, 0);
-  padding-top: 25px;
+  padding-top: 100px;
 }
 
 .logo {
@@ -49,7 +49,7 @@
 }
 
 .intro {
-  margin-top: 25px;
+  margin-top: 50px;
   & > p {
     display: flex;
     justify-content: center;
@@ -359,11 +359,11 @@
     right: 20px;
   }
   .groupDot {
-    top: 30rem !important;
+    top: 24rem !important;
     left: 15px !important;
   }
   .contact {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }
 
@@ -457,6 +457,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   @media screen and (max-width: 576px) {
-    top: 32rem;
+    top: 26rem;
+    right: 25px;
   }
 }
