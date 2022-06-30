@@ -52,7 +52,7 @@ export default function Main() {
         <div className="intro">
           <p>Nguyễn Thanh Thiên</p>
           <p>codertom100@gmail.com</p>
-          <p>It is the first step that is troublesome!</p>
+          <p>The first step is always the hardest!</p>
         </div>
         <div className="contact">
           <p className="contact__content">About me</p>
