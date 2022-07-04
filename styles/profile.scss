@@ -75,3 +75,30 @@
   animation-name: close;
   animation-duration: 0.5s;
 }
+.menu-close-first {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -300px;
+  padding: 20px;
+  z-index: 3;
+  background: #4d4748;
+  color: #fff;
+}
+
+.introduce {
+  box-sizing: border-box;
+  margin-top: 100px;
+
+  &__title {
+    padding-left: 100px;
+    float: left;
+    width: 70%;
+    font-family: "Noto Serif", serif;
+  }
+}
+
+.avatar-group {
+  float: left;
+  width: 30%;
+}

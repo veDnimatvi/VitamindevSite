@@ -6,7 +6,11 @@ import img from "../public/img/new-avatar.jpg";
 
 export default function MyProfile() {
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
-  const handleMenuMobile = () => setOpenMenuMobile(!openMenuMobile);
+  const [isFirstLoad, setisFirstLoad] = useState(false);
+  const handleMenuMobile = () => {
+    setOpenMenuMobile(!openMenuMobile);
+    setisFirstLoad(true);
+  };
 
   useEffect(() => {
     const text = document.querySelector(".text p");
@@ -51,7 +55,15 @@ export default function MyProfile() {
         </div>
       </div>
 
-      <div className={openMenuMobile ? "menu-open" : "menu-close"}>
+      <div
+        className={
+          openMenuMobile
+            ? "menu-open"
+            : isFirstLoad
+            ? "menu-close"
+            : "menu-close-first"
+        }
+      >
         <div className="text-xl cursor-pointer mb-12 ml-16 mt-28">Home</div>
         <div className="text-xl cursor-pointer mb-12 ml-16">About</div>
         <div className="text-xl cursor-pointer mb-12 ml-16">Resume</div>
@@ -60,12 +72,33 @@ export default function MyProfile() {
         <div className="text-xl cursor-pointer mb-12 ml-16">Contact</div>
       </div>
 
-      <div className="my-avatar">
-        <Image className="logo2" src={img} alt="a" width={150} height={150} />
-        <div className="text">
-          <p className="font-bold text-black">
-            Nguyễn Thanh Thiên - Web Developer -{" "}
-          </p>
+      <div className="introduce container mx-auto">
+        <div className="avatar-group flex justify-center">
+          <div className="my-avatar">
+            <Image
+              className="logo2"
+              src={img}
+              alt="a"
+              width={150}
+              height={150}
+            />
+            <div className="text">
+              <p className="font-bold text-black">
+                Nguyễn Thanh Thiên - Web Developer -{" "}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="introduce__title">
+          <div className="font-bold text-xl">Hello !</div>
+          <div className="text-6xl">
+            I am <span className="text-orange-300">Thiên</span>
+          </div>
+          <div className="text-6xl">
+            I am <span className="text-orange-300">a web developer</span> <br />
+            in Hanoi !
+          </div>
         </div>
       </div>
     </>

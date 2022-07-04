@@ -23,7 +23,6 @@ function Blog(props) {
     // <Layout>
     <>
       <div id="blog-post-container">
-        <Navbar />
         <div className="prose main">
           <h1 className="header">{data.title}</h1>
           <h3>Share to social</h3>
