@@ -92,10 +92,10 @@ export default function MyProfile() {
 
         <div className="introduce__title">
           <div className="font-bold text-xl">Hello !</div>
-          <div className="text-6xl">
+          <div className="md:text-2xl lg:text-6xl">
             I am <span className="text-orange-300">Thiên</span>
           </div>
-          <div className="text-6xl">
+          <div className="md:text-2xl lg:text-6xl">
             I am <span className="text-orange-300">a web developer</span> <br />
             in Hanoi !
           </div>
