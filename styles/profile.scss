@@ -1,7 +1,28 @@
 .navbar {
-  box-sizing: border-box;
   margin-top: 20px;
   font-family: "Noto Serif", serif;
+}
+
+.introduce {
+  margin-top: 20px;
+  padding: 100px 0;
+  font-family: "Noto Serif", serif;
+  background: grey;
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2 em;
+  transform-origin: 0 100px;
 }
 .menu-icon {
   display: none;
@@ -86,30 +107,26 @@
   color: #fff;
 }
 
-.introduce {
+.about {
+  font-family: "Noto Serif", serif;
   box-sizing: border-box;
-  margin-top: 100px;
-  @media all and (max-width: 820px) {
+  margin-top: 150px;
+  padding: 40px;
+  @media all and (max-width: 768px) {
     margin-top: 50px;
   }
   &__title {
-    padding-left: 100px;
     float: left;
-    width: 70%;
-    font-family: "Noto Serif", serif;
-    @media all and (max-width: 767px) {
-      display: none;
-    }
-    @media all and(max-width: 820px) {
-      padding-top: 50px;
+    width: 50%;
+    @media all and (max-width: 768px) {
+      width: 100%;
     }
   }
-}
-
-.avatar-group {
-  float: left;
-  width: 30%;
-  @media all and (max-width: 767px) {
-    width: 100%;
+  &__info {
+    float: left;
+    width: 50%;
+    @media all and (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
