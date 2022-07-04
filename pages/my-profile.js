@@ -7,6 +7,7 @@ import face from "../public/img/facebook-100.png";
 import github from "../public/img/github-100.png";
 import linkedin from "../public/img/linkedin-100.png";
 import twitter from "../public/img/twitter-100.png";
+import MySkill from "./components/MySkill";
 
 export default function MyProfile() {
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
@@ -37,22 +38,23 @@ export default function MyProfile() {
           ></div>
         </>
       )}
-      <div className="navbar container mx-auto flex justify-between">
-        <div className="text-2xl flex items-center float-left cursor-pointer pl-8">
+      <div className="container flex justify-between mx-auto navbar">
+        <div className="flex items-center float-left pl-8 text-2xl cursor-pointer">
           <Image src={logo} alt="logo" />
           Vitamindev
         </div>
-        <div className="float-right flex menu-desktop">
+        <div className="flex float-right menu-desktop">
           <div className="text-xl cursor-pointer">Home</div>
-          <div className="text-xl ml-28 cursor-pointer">About</div>
-          <div className="text-xl ml-28 cursor-pointer">Resume</div>
-          <div className="text-xl ml-28 cursor-pointer">Skills</div>
-          <div className="text-xl ml-28 cursor-pointer">Blog</div>
-          <div className="text-xl ml-28 cursor-pointer">Contact</div>
+          <div className="ml-20 text-xl cursor-pointer">About</div>
+          <div className="ml-20 text-xl cursor-pointer">Resume</div>
+          <div className="ml-20 text-xl cursor-pointer">Skills</div>
+          <div className="ml-20 text-xl cursor-pointer">Project</div>
+          <div className="ml-20 text-xl cursor-pointer">Blog</div>
+          <div className="ml-20 text-xl cursor-pointer">Contact</div>
         </div>
 
         <div
-          className="float-right menu-icon mr-4 pt-1"
+          className="float-right pt-1 mr-4 menu-icon"
           onClick={handleMenuMobile}
         >
           <Image src={menuIcon} alt="menu icon" />
@@ -68,12 +70,13 @@ export default function MyProfile() {
             : "menu-close-first"
         }
       >
-        <div className="text-xl cursor-pointer mb-12 ml-16 mt-28">Home</div>
-        <div className="text-xl cursor-pointer mb-12 ml-16">About</div>
-        <div className="text-xl cursor-pointer mb-12 ml-16">Resume</div>
-        <div className="text-xl cursor-pointer mb-12 ml-16">Skills</div>
-        <div className="text-xl cursor-pointer mb-12 ml-16">Blog</div>
-        <div className="text-xl cursor-pointer mb-12 ml-16">Contact</div>
+        <div className="mb-12 ml-16 text-xl cursor-pointer mt-28">Home</div>
+        <div className="mb-12 ml-16 text-xl cursor-pointer">About</div>
+        <div className="mb-12 ml-16 text-xl cursor-pointer">Resume</div>
+        <div className="mb-12 ml-16 text-xl cursor-pointer">Skills</div>
+        <div className="mb-12 ml-16 text-xl cursor-pointer">Project</div>
+        <div className="mb-12 ml-16 text-xl cursor-pointer">Blog</div>
+        <div className="mb-12 ml-16 text-xl cursor-pointer">Contact</div>
       </div>
 
       <div className="introduce">
@@ -111,7 +114,7 @@ export default function MyProfile() {
             <div>I want to be a web developer and web designer</div>
             <div>My hobbies are playing sports, playing music, traveling </div>
           </div>
-          <div className="about__info pt-10">
+          <div className="pt-10 about__info">
             <div>Name: Nguyễn Thanh Thiên</div>
             <div>Born : August 09, 1999</div>
             <div>Email : codertom100@gmail.com</div>
@@ -158,6 +161,53 @@ export default function MyProfile() {
                 <span>
                   <Image className="logo2" src={linkedin} alt="icon linkedin" />
                 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto">
+        <div className="resume">
+          <div>
+            <div className="text-3xl">Resume</div>
+            <div className="w-40 h-1 bg-orange-300 rounded"></div>
+          </div>
+          <div>
+            <div className="time-line">
+              <div className="wapper time-line__left">
+                <div className="time-line__content">
+                  <h2>08/2017 - 7/2021</h2>
+                  <p>
+                    I am Student at Hanoi University of Industry. My major is
+                    software engineering
+                  </p>
+                </div>
+              </div>
+              <div className="wapper time-line__right">
+                <div className="time-line__content">
+                  <h2>12/2019 - 10/2020</h2>
+                  <p>I started to learn javascript, reactjs framework</p>
+                </div>
+              </div>
+              <div className="wapper time-line__left">
+                <div className="time-line__content">
+                  <h2>12/2020 - 03/2021</h2>
+                  <p>
+                    I am an intern at Front end (ReactJs) developer position at
+                    Hivetech Company
+                  </p>
+                </div>
+              </div>
+              <div className="wapper time-line__right">
+                <div className="time-line__content">
+                  <h2>04-2021 - now</h2>
+                  <p>
+                    I am a junior at at Front end developer position at Hivetech
+                    Company.Here I learn and work with many front end frameworks
+                    like reactjs, vuejs, angularjs
+                  </p>
+                </div>
               </div>
             </div>
           </div>
