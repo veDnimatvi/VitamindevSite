@@ -1,23 +1,77 @@
-.my-profile {
-  background: black;
-  height: 100vh;
+.navbar {
+  box-sizing: border-box;
+  margin-top: 20px;
+  font-family: "Noto Serif", serif;
 }
-.my-name {
-  font-size: 80px;
-  font-family: "Playfair Display", serif;
-  color: #fff;
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
+.menu-icon {
+  display: none;
 }
 
-@-webkit-keyframes glow {
+@media all and (max-width: 1280px) {
+  .menu-desktop {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+.model {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: transparent;
+}
+
+@keyframes open {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    left: -300px;
+    right: 400px;
   }
-
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    left: 0;
+    right: 100px;
   }
+}
+@keyframes close {
+  from {
+    left: 0;
+    right: 100px;
+  }
+  to {
+    left: -300px;
+    right: 400px;
+  }
+}
+.menu-open {
+  padding-top: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  padding: 20px;
+  z-index: 3;
+  background: #4d4748;
+  color: #fff;
+  animation-name: open;
+  animation-duration: 0.5s;
+}
+
+.menu-close {
+  padding-top: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -300px;
+  width: 250px;
+  padding: 20px;
+  z-index: 3;
+  background: #4d4748;
+  color: #fff;
+  animation-name: close;
+  animation-duration: 0.5s;
 }

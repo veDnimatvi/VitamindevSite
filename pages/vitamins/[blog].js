@@ -2,7 +2,6 @@ import React from "react";
 import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import face from "../../public/img/facebook-30.png";

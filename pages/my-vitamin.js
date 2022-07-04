@@ -1,5 +1,4 @@
 import matter from "gray-matter";
-import Navbar from "./components/Navbar";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Footer from "./components/Footer";
