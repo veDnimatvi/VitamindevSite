@@ -146,7 +146,8 @@
 }
 .resume,
 .skills,
-.project {
+.project,
+.blog {
   font-family: "Noto Serif", serif;
   padding: 20px 40px;
 }
@@ -276,4 +277,11 @@
   .time-line__right {
     left: 0%;
   }
+}
+
+.project-item {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 20px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }

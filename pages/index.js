@@ -283,8 +283,38 @@ export default function MyProfile() {
             </div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
           </div>
-          <div className="flex justify-between">
-            <div></div>
+
+          <div className="project-item">
+            <p className="text-2xl text-orange-300">DTC(Đầu tư công)</p>
+            <div>
+              DTC system - government a system - management of public projects
+              of the country under the "secret" ministry. Technologies is VueJS
+            </div>
+          </div>
+          <div className="project-item">
+            <p className="text-2xl text-fuchsia-400">TCMA(Telekom)</p>
+            <div>
+              TCMA is a dynamic e-commerce site for telecommunications products
+              and management systems. Technologies is ReactJS, Apollo GraphQL
+            </div>
+          </div>
+          <div className="project-item">
+            <p className="text-2xl text-green-500">MS(Mobile Skips)</p>
+            <div>
+              MS is The skip bin hire industry system manager in Australia for
+              mobileskips.com.au. Technologies is AngularJS
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto">
+        <div className="blog">
+          <div>
+            <div className="text-3xl" id="blog">
+              Latest post on my blog
+            </div>
+            <div className="w-40 h-1 bg-orange-300 rounded"></div>
           </div>
         </div>
       </div>
