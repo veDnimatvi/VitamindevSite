@@ -59,9 +59,11 @@ export default function MyProfile(props) {
       )}
       <div className="navbar-sticky">
         <div className="container flex justify-between mx-auto navbar">
-          <div className="flex items-center float-left pl-8 text-2xl cursor-pointer">
-            <Image src={logo} alt="logo" />
-            Vitamindev
+          <div className="float-left pl-8 text-2xl cursor-pointer">
+            <a href="#home" className="flex items-center">
+              <Image src={logo} alt="logo" />
+              Vitamindev
+            </a>
           </div>
           <div className="flex float-right menu-desktop ">
             <div className="text-xl cursor-pointer">
@@ -169,12 +171,10 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto" id="about">
         <div className="about">
           <div className="about__title">
-            <div className="text-3xl" id="about">
-              About me
-            </div>
+            <div className="text-3xl">About me</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
             <div>I want to be a web developer and web designer</div>
             <div>My hobbies are playing sports, playing music, traveling </div>
@@ -232,12 +232,10 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-20" id="resume">
         <div className="resume">
           <div>
-            <div className="text-3xl" id="resume">
-              Resume
-            </div>
+            <div className="text-3xl">Resume</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
           </div>
           <div>
@@ -281,23 +279,19 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-20" id="skill">
         <div className="skills">
           <div className="mb-10">
-            <div className="text-3xl" id="skill">
-              My Skills
-            </div>
+            <div className="text-3xl">My Skills</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
           </div>
           <MySkill />
         </div>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-20" id="project">
         <div className="project">
           <div className="mb-10">
-            <div className="text-3xl" id="project">
-              Outstanding Projects
-            </div>
+            <div className="text-3xl">Outstanding Projects</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
           </div>
 
@@ -325,12 +319,10 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-20" id="blog">
         <div className="blog">
           <div>
-            <div className="text-3xl" id="blog">
-              Latest post on my blog
-            </div>
+            <div className="text-3xl">Latest post on my blog</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
 
             <div className="blog-container">
@@ -360,12 +352,10 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-20" id="contact">
         <div className="send-me">
           <div className="mb-10">
-            <div className="text-3xl" id="contact">
-              Contact me
-            </div>
+            <div className="text-3xl">Contact me</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
           </div>
           <div className="send-me__img flex justify-center">

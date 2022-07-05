@@ -15,7 +15,7 @@
 .introduce {
   margin-top: 15px;
   padding: 200px 0;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 0px);
   font-family: "Noto Serif", serif;
   background: grey;
   @media all and (max-width: 768px) {
@@ -126,8 +126,8 @@
 .about {
   font-family: "Noto Serif", serif;
   box-sizing: border-box;
-  margin-top: 50px;
-  padding: 40px;
+
+  padding: 150px 40px 40px 40px;
 
   &__title {
     float: left;
@@ -150,6 +150,13 @@
 .blog {
   font-family: "Noto Serif", serif;
   padding: 20px 40px;
+}
+
+#resume {
+  margin-top: 13rem;
+  @media all and (max-width: 600px) {
+    margin-top: 20rem;
+  }
 }
 
 .send-me {
@@ -282,9 +289,6 @@
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   position: relative;
   border-radius: 6px;
-  @media all and (max-width: 600px) {
-    padding: 20px 0;
-  }
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
