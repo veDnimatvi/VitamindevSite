@@ -13,6 +13,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-behavior: -webkit-smooth;
+  scroll-behavior: -ms-smooth;
+}
+
 a {
   color: inherit;
   text-decoration: none;

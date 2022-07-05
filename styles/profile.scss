@@ -2,6 +2,15 @@
   margin-top: 20px;
   font-family: "Noto Serif", serif;
 }
+.navbar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: white;
+  padding: 10px;
+  // border-bottom: 1px solid grey;
+}
 
 .introduce {
   margin-top: 15px;
@@ -73,7 +82,8 @@
 }
 .menu-open {
   padding-top: 50px;
-  position: absolute;
+  position: -webkit-sticky;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -88,7 +98,8 @@
 
 .menu-close {
   padding-top: 50px;
-  position: absolute;
+  position: -webkit-sticky;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: -300px;
@@ -101,7 +112,8 @@
   animation-duration: 0.5s;
 }
 .menu-close-first {
-  position: absolute;
+  position: -webkit-sticky;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: -300px;
@@ -132,13 +144,12 @@
     }
   }
 }
-.resume {
+.resume,
+.skills,
+.project {
   font-family: "Noto Serif", serif;
-  box-sizing: border-box;
-  margin-top: 50px;
-  padding: 40px;
+  padding: 20px 40px;
 }
-
 
 .time-line {
   position: relative;
@@ -148,7 +159,7 @@
 
 /* The actual timeline (the vertical ruler) */
 .time-line::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 3px;
   background-color: gray;
@@ -172,13 +183,13 @@
 
 /* The circles on the timeline */
 .wapper::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 35px;
   height: 35px;
   right: -17px;
   background-color: white;
-  border: 9px solid #FFA804;
+  border: 9px solid #ffa804;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -242,26 +253,27 @@
 @media screen and (max-width: 600px) {
   /* Full-width containers */
   .wapper {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
   }
-  
+
   /* Make sure that all arrows are pointing leftwards */
   .wapper::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
-  .time-line__left::after, .time-line__right::after {
-  left: 15px;
+  .time-line__left::after,
+  .time-line__right::after {
+    left: 15px;
   }
-  
+
   /* Make all right containers behave like the left ones */
   .time-line__right {
-  left: 0%;
+    left: 0%;
   }
 }
