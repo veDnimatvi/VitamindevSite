@@ -1,5 +1,7 @@
 import Image from "next/image";
+import matter from "gray-matter";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import logo from "../public/img/my-logo.svg";
 import menuIcon from "../public/img/icons-menu.svg";
 import img from "../public/img/new-avatar.jpg";
@@ -8,16 +10,30 @@ import github from "../public/img/github-100.png";
 import linkedin from "../public/img/linkedin-100.png";
 import twitter from "../public/img/twitter-100.png";
 import MySkill from "./components/MySkill";
+import { getNumFromDateString } from "../utils/blogFunction";
 
-export default function MyProfile() {
+export default function MyProfile(props) {
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
   const [isFirstLoad, setisFirstLoad] = useState(false);
+
+  const router = useRouter();
+  const realData = props.data.map((blog) => matter(blog));
+  let listItems = realData.map((listItem) => listItem.data);
+
   const handleMenuMobile = () => {
     setOpenMenuMobile(!openMenuMobile);
     setisFirstLoad(true);
   };
 
   const closeMenu = () => setOpenMenuMobile(false);
+
+  //Sort Items Based On Date
+  listItems = listItems.sort((a, b) => {
+    let aDate = getNumFromDateString(a.date);
+    let bDate = getNumFromDateString(b.date);
+
+    return bDate - aDate;
+  });
 
   useEffect(() => {
     const text = document.querySelector(".text p");
@@ -288,7 +304,7 @@ export default function MyProfile() {
             <p className="text-2xl text-orange-300">DTC(Đầu tư công)</p>
             <div>
               DTC system - government a system - management of public projects
-              of the country under the "secret" ministry. Technologies is VueJS
+              of the country under the secret ministry. Technologies is VueJS
             </div>
           </div>
           <div className="project-item">
@@ -315,9 +331,56 @@ export default function MyProfile() {
               Latest post on my blog
             </div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
+
+            <div className="blog-container">
+              {listItems?.slice(0, 4)?.map((blog, i) => (
+                <div
+                  className="blog-post"
+                  key={i}
+                  onClick={() => router.push(`/vitamins/${blog?.slug}`)}
+                >
+                  <div className="cursor-pointer">
+                    <img src={blog?.img} />
+                    <div className="blog-date">{blog?.date}</div>
+                    <div className="blog-title">{blog?.title}</div>
+                    <div>{blog?.description}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div
+              className="cursor-pointer hover:text-orange-400"
+              onClick={() => router.push("/my-vitamin")}
+            >
+              More posts &#8811;
+            </div>
           </div>
         </div>
       </div>
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const fs = require("fs");
+
+  const files = fs.readdirSync(`${process.cwd()}/content`, "utf-8");
+
+  const blogs = files.filter((fn) => fn.endsWith(".md"));
+
+  const data = blogs.map((blog) => {
+    const path = `${process.cwd()}/content/${blog}`;
+    const rawContent = fs.readFileSync(path, {
+      encoding: "utf-8",
+    });
+
+    return rawContent;
+  });
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
