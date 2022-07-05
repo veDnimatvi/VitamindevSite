@@ -9,6 +9,7 @@ import face from "../public/img/facebook-100.png";
 import github from "../public/img/github-100.png";
 import linkedin from "../public/img/linkedin-100.png";
 import twitter from "../public/img/twitter-100.png";
+import sendMessageImg from "../public/img/contact-me.svg";
 import MySkill from "./components/MySkill";
 import { getNumFromDateString } from "../utils/blogFunction";
 
@@ -350,7 +351,7 @@ export default function MyProfile(props) {
             </div>
 
             <div
-              className="cursor-pointer hover:text-orange-400"
+              className="cursor-pointer hover:text-orange-400 mt-6"
               onClick={() => router.push("/my-vitamin")}
             >
               More posts &#8811;
@@ -358,6 +359,39 @@ export default function MyProfile(props) {
           </div>
         </div>
       </div>
+
+      <div className="container mx-auto">
+        <div className="send-me">
+          <div className="mb-10">
+            <div className="text-3xl" id="contact">
+              Contact me
+            </div>
+            <div className="w-40 h-1 bg-orange-300 rounded"></div>
+          </div>
+          <div className="send-me__img flex justify-center">
+            <Image src={sendMessageImg} alt="send message img" />
+          </div>
+          <div className="flex justify-center">
+            <div className="send-me__form">
+              <div className="send-me__form__input">
+                <input type="text" placeholder="Your name ..." />
+              </div>
+              <div className="send-me__form__input">
+                <input type="text" placeholder="Your email ..." />
+              </div>
+              <div className="send-me__form__input">
+                <textarea placeholder="Your message ..." />
+              </div>
+
+              <button className="bg-orange-400 p-2 rounded text-white">
+                Send message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="font-bold text-center my-6">©2022 by Thiên Nguyễn</div>
     </>
   );
 }

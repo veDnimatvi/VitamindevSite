@@ -152,6 +152,43 @@
   padding: 20px 40px;
 }
 
+.send-me {
+  font-family: "Noto Serif", serif;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  &__img {
+    float: left;
+    width: 50%;
+
+    @media all and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__form {
+    float: left;
+    width: 50%;
+    &__input {
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      & input {
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        width: 100%;
+      }
+      & textarea {
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        width: 100%;
+      }
+    }
+    @media all and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
 .time-line {
   position: relative;
   max-width: 1200px;
@@ -242,7 +279,7 @@
 /* The actual content */
 .time-line__content {
   padding: 20px 30px;
-  background-color: white;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   position: relative;
   border-radius: 6px;
   @media all and (max-width: 600px) {
