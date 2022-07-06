@@ -20,9 +20,6 @@ import mariadb from "../../public/img/mariadb-100.png";
 export default function MySkill() {
   return (
     <>
-      <div className="skill">
-        <p className="skill__content">My skills</p>
-      </div>
       <div className="list-skill">
         <div className="list-skill__item">
           <Image src={html} alt="html" />

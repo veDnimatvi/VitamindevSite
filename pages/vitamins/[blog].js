@@ -2,7 +2,6 @@ import React from "react";
 import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import face from "../../public/img/facebook-30.png";
@@ -24,7 +23,6 @@ function Blog(props) {
     // <Layout>
     <>
       <div id="blog-post-container">
-        <Navbar />
         <div className="prose main">
           <h1 className="header">{data.title}</h1>
           <h3>Share to social</h3>

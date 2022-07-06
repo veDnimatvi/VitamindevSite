@@ -9,7 +9,6 @@ import twitter from "../../public/img/twitter-100.png";
 import MySkill from "./MySkill";
 import Hobbies from "./Hobbies";
 import Link from "next/link";
-import Navbar from "./Navbar";
 
 export default function Main() {
   const arr = [
