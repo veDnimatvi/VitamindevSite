@@ -42,7 +42,7 @@ export default function MyProfile(props) {
 
     function activeMenu() {
       let len = sections.length;
-      while (--len && window.scrollY + 100 < sections[len].offsetTop) {}
+      while (--len && window.scrollY + 200 < sections[len].offsetTop) {}
       navItems.forEach((ltx) => ltx.classList.remove("active"));
       navItems[len].classList.add("active");
     }
