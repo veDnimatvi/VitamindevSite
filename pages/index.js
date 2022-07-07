@@ -37,6 +37,18 @@ export default function MyProfile(props) {
   });
 
   useEffect(() => {
+    const sections = document.querySelectorAll(".section");
+    const navItems = document.querySelectorAll(".nav-item");
+
+    function activeMenu() {
+      let len = sections.length;
+      while (--len && window.scrollY + 100 < sections[len].offsetTop) {}
+      navItems.forEach((ltx) => ltx.classList.remove("active"));
+      navItems[len].classList.add("active");
+    }
+    activeMenu();
+    window.addEventListener("scroll", activeMenu);
+
     const text = document.querySelector(".text p");
     text.innerHTML = text.innerText
       .split("")
@@ -66,25 +78,25 @@ export default function MyProfile(props) {
             </a>
           </div>
           <div className="flex float-right menu-desktop ">
-            <div className="text-xl cursor-pointer">
+            <div className="text-xl cursor-pointer nav-item">
               <a href="#home">Home</a>
             </div>
-            <div className="ml-20 text-xl cursor-pointer">
+            <div className="ml-20 text-xl cursor-pointer nav-item">
               <a href="#about">About</a>
             </div>
-            <div className="ml-20 text-xl cursor-pointer">
+            <div className="ml-20 text-xl cursor-pointer nav-item">
               <a href="#resume">Resume</a>
             </div>
-            <div className="ml-20 text-xl cursor-pointer">
+            <div className="ml-20 text-xl cursor-pointer nav-item">
               <a href="#skill">Skills</a>
             </div>
-            <div className="ml-20 text-xl cursor-pointer">
+            <div className="ml-20 text-xl cursor-pointer nav-item">
               <a href="#project">Project</a>
             </div>
-            <div className="ml-20 text-xl cursor-pointer">
+            <div className="ml-20 text-xl cursor-pointer nav-item">
               <a href="#blog">Blog</a>
             </div>
-            <div className="ml-20 text-xl cursor-pointer">
+            <div className="ml-20 text-xl cursor-pointer nav-item">
               <a href="#contact">Contact</a>
             </div>
           </div>
@@ -144,7 +156,7 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="introduce" id="home">
+      <div className="introduce section" id="home">
         <div className="flex justify-center">
           <div className="my-avatar">
             <Image
@@ -171,7 +183,7 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto" id="about">
+      <div className="container mx-auto section" id="about">
         <div className="about">
           <div className="about__title">
             <div className="text-3xl">About me</div>
@@ -232,7 +244,7 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto pt-20" id="resume">
+      <div className="container pt-20 mx-auto section" id="resume">
         <div className="resume">
           <div>
             <div className="text-3xl">Resume</div>
@@ -279,7 +291,7 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto pt-20" id="skill">
+      <div className="container pt-20 mx-auto section" id="skill">
         <div className="skills">
           <div className="mb-10">
             <div className="text-3xl">My Skills</div>
@@ -288,7 +300,7 @@ export default function MyProfile(props) {
           <MySkill />
         </div>
       </div>
-      <div className="container mx-auto pt-20" id="project">
+      <div className="container pt-20 mx-auto section" id="project">
         <div className="project">
           <div className="mb-10">
             <div className="text-3xl">Outstanding Projects</div>
@@ -319,7 +331,7 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto pt-20" id="blog">
+      <div className="container pt-20 mx-auto section" id="blog">
         <div className="blog">
           <div>
             <div className="text-3xl">Latest post on my blog</div>
@@ -343,7 +355,7 @@ export default function MyProfile(props) {
             </div>
 
             <div
-              className="cursor-pointer hover:text-orange-400 mt-6"
+              className="mt-6 cursor-pointer hover:text-orange-400"
               onClick={() => router.push("/my-vitamin")}
             >
               More posts &#8811;
@@ -352,13 +364,13 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="container mx-auto pt-20" id="contact">
+      <div className="container pt-20 mx-auto section" id="contact">
         <div className="send-me">
           <div className="mb-10">
             <div className="text-3xl">Contact me</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
           </div>
-          <div className="send-me__img flex justify-center">
+          <div className="flex justify-center send-me__img">
             <Image src={sendMessageImg} alt="send message img" />
           </div>
           <div className="flex justify-center">
@@ -373,7 +385,7 @@ export default function MyProfile(props) {
                 <textarea placeholder="Your message ..." />
               </div>
 
-              <button className="bg-orange-400 p-2 rounded text-white">
+              <button className="p-2 text-white bg-orange-400 rounded">
                 Send message
               </button>
             </div>
@@ -381,7 +393,7 @@ export default function MyProfile(props) {
         </div>
       </div>
 
-      <div className="font-bold text-center my-6">©2022 by Thiên Nguyễn</div>
+      <div className="my-40 font-bold text-center">©2022 by Thiên Nguyễn</div>
     </>
   );
 }
