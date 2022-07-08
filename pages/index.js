@@ -23,7 +23,6 @@ export default function MyProfile(props) {
   const [isFirstLoad, setisFirstLoad] = useState(false);
 
   const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -53,21 +52,20 @@ export default function MyProfile(props) {
   });
 
   const sendEmail = () => {
-    if (!isValidEmail(email) || name === "" || message === "") {
+    if (!isValidEmail(email) || message === "") {
       setError(true);
     } else {
       setError(false);
       axios
         .post("https://send-email-contact-me.herokuapp.com/send", {
           yourEmail: email,
-          subject: "I'm " + name,
+          subject: "My email is " + email,
           message,
         })
         .then((res) => {
           setMessageAlert(res?.data);
           setEmail("");
           setMessage("");
-          setName("");
           setSuccess(true);
           setTimeout(() => setSuccess(false), 3000);
         })
@@ -414,15 +412,6 @@ export default function MyProfile(props) {
           </div>
           <div className="flex justify-center">
             <div className="send-me__form">
-              <div className="send-me__form__input">
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Your name ..."
-                />
-              </div>
-
               <div className="send-me__form__input">
                 <input
                   type="text"
