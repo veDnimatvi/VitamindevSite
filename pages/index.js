@@ -1,5 +1,6 @@
 import Image from "next/image";
 import matter from "gray-matter";
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import logo from "../public/img/my-logo.svg";
@@ -13,13 +14,28 @@ import sendMessageImg from "../public/img/contact-me.svg";
 import MySkill from "./components/MySkill";
 import { getNumFromDateString } from "../utils/blogFunction";
 
+const CustomizeAlert = ({ messge }) => {
+  return <div className="bg-green-300 p-2 rounded mb-4">{messge}</div>;
+};
+
 export default function MyProfile(props) {
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
   const [isFirstLoad, setisFirstLoad] = useState(false);
 
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [messageAlert, setMessageAlert] = useState("");
+
   const router = useRouter();
   const realData = props.data.map((blog) => matter(blog));
   let listItems = realData.map((listItem) => listItem.data);
+
+  function isValidEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
 
   const handleMenuMobile = () => {
     setOpenMenuMobile(!openMenuMobile);
@@ -35,6 +51,29 @@ export default function MyProfile(props) {
 
     return bDate - aDate;
   });
+
+  const sendEmail = () => {
+    if (!isValidEmail(email) || name === "" || message === "") {
+      setError(true);
+    } else {
+      setError(false);
+      axios
+        .post("https://send-email-contact-me.herokuapp.com/send", {
+          yourEmail: email,
+          subject: "I'm " + name,
+          message,
+        })
+        .then((res) => {
+          setMessageAlert(res?.data);
+          setEmail("");
+          setMessage("");
+          setName("");
+          setSuccess(true);
+          setTimeout(() => setSuccess(false), 3000);
+        })
+        .catch((err) => console.log("err", err));
+    }
+  };
 
   useEffect(() => {
     const sections = document.querySelectorAll(".section");
@@ -376,16 +415,42 @@ export default function MyProfile(props) {
           <div className="flex justify-center">
             <div className="send-me__form">
               <div className="send-me__form__input">
-                <input type="text" placeholder="Your name ..." />
-              </div>
-              <div className="send-me__form__input">
-                <input type="text" placeholder="Your email ..." />
-              </div>
-              <div className="send-me__form__input">
-                <textarea placeholder="Your message ..." />
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name ..."
+                />
               </div>
 
-              <button className="p-2 text-white bg-orange-400 rounded">
+              <div className="send-me__form__input">
+                <input
+                  type="text"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your email ..."
+                />
+              </div>
+              <div className="send-me__form__input">
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Your message ..."
+                />
+              </div>
+
+              {error && (
+                <h2 className="text-red-500 mb-4">
+                  Input cannot be blank and email must be valid !
+                </h2>
+              )}
+
+              {success && <CustomizeAlert messge={messageAlert} />}
+
+              <button
+                onClick={sendEmail}
+                className="p-2 text-white bg-orange-400 rounded"
+              >
                 Send message
               </button>
             </div>
