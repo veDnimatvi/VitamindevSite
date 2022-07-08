@@ -25,6 +25,7 @@ export default function MyProfile(props) {
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [messageAlert, setMessageAlert] = useState("");
 
@@ -56,6 +57,7 @@ export default function MyProfile(props) {
       setError(true);
     } else {
       setError(false);
+      setLoading(true);
       axios
         .post("https://send-email-contact-me.herokuapp.com/send", {
           yourEmail: email,
@@ -67,6 +69,7 @@ export default function MyProfile(props) {
           setEmail("");
           setMessage("");
           setSuccess(true);
+          setLoading(false);
           setTimeout(() => setSuccess(false), 3000);
         })
         .catch((err) => console.log("err", err));
@@ -438,8 +441,16 @@ export default function MyProfile(props) {
 
               <button
                 onClick={sendEmail}
-                className="p-2 text-white bg-orange-400 rounded"
+                className="p-2 text-white bg-orange-400 rounded flex items-center"
               >
+                {loading && (
+                  <div className="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                )}
                 Send message
               </button>
             </div>
