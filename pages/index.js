@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import logo from "../public/img/my-logo.svg";
+import logo from "../public/img/mylogo.svg";
 import menuIcon from "../public/img/icons-menu.svg";
 import img from "../public/img/new-avatar.jpg";
 import face from "../public/img/facebook-100.png";
