@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import logo from "../public/img/my-logo.svg";
+import logo from "../public/img/mylogo.svg";
 import menuIcon from "../public/img/icons-menu.svg";
 import img from "../public/img/new-avatar.jpg";
 import face from "../public/img/facebook-100.png";
@@ -229,7 +229,10 @@ export default function MyProfile(props) {
             <div className="text-3xl">About me</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
             <div>I want to be a web developer and web designer</div>
-            <div>My hobbies are playing sports, playing music, traveling </div>
+            <div>
+              My hobbies are playing sports, playing music, listening to music,
+              watching movies, traveling and love someone who loves me.
+            </div>
           </div>
           <div className="pt-10 about__info">
             <div>Name: Nguyễn Thanh Thiên</div>
