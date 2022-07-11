@@ -237,7 +237,7 @@ export default function MyProfile(props) {
             <div>Email : codertom100@gmail.com</div>
             <div>Phone : 0345000921</div>
 
-            <div className="wrapper">
+            <div className="wrapper flex">
               <div
                 className="icon facebook"
                 onClick={() =>
@@ -385,7 +385,7 @@ export default function MyProfile(props) {
                   onClick={() => router.push(`/vitamins/${blog?.slug}`)}
                 >
                   <div className="cursor-pointer">
-                    <img src={blog?.img} />
+                    <img src={blog?.img} className="title-img" />
                     <div className="blog-date">{blog?.date}</div>
                     <div className="blog-title">{blog?.title}</div>
                     <div>{blog?.description}</div>

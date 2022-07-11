@@ -20,7 +20,7 @@ export default function Footer() {
       </div>
       <div className="my-name">Thiên Nguyễn</div>
       <div className="my-email">codertom100@gmail.com</div>
-      <div className="wrapper">
+      <div className="wrapper flex justify-center">
         <div
           className="icon facebook"
           onClick={() => window.open("https://www.facebook.com/nt.thien.9899/")}
