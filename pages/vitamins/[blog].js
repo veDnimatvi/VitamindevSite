@@ -1,6 +1,7 @@
 import React from "react";
 import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import Footer from "../components/Footer";
 import Image from "next/image";
@@ -43,7 +44,12 @@ function Blog(props) {
               onClick={() => socialShareFaceBook("LINKEDIN")}
             />
           </div>
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+          >
+            {content}
+          </ReactMarkdown>
         </div>
       </div>
       <Footer />
