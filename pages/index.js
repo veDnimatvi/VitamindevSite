@@ -214,12 +214,55 @@ export default function MyProfile(props) {
           </div>
         </div>
 
-        <div className="text-6xl text-center text-white">
+        <div className="text-5xl text-center text-white">
           I am <span className="text-orange-300">Thiên</span>
         </div>
-        <div className="text-6xl text-center text-white">
+        <div className="text-5xl text-center text-white">
           I am <span className="text-orange-300">a web developer</span> <br />
           in Hanoi !
+        </div>
+        <div className="wrapper flex justify-center">
+          <div
+            className="icon facebook"
+            onClick={() =>
+              window.open("https://www.facebook.com/nt.thien.9899/")
+            }
+          >
+            <div className="tooltip">Facebook</div>
+            <span>
+              <Image className="logo2" src={face} alt="icon face" />
+            </span>
+          </div>
+          <div
+            className="icon github"
+            onClick={() => window.open("https://github.com/vitamindevplus")}
+          >
+            <div className="tooltip">GitHub</div>
+            <span>
+              <Image className="logo2" src={github} alt="icon github" />
+            </span>
+          </div>
+          <div
+            className="icon twitter"
+            onClick={() => window.open("https://twitter.com/vitamindev100")}
+          >
+            <div className="tooltip">Twitter</div>
+            <span>
+              <Image className="logo2" src={twitter} alt="icon twitter" />
+            </span>
+          </div>
+
+          <div
+            className="icon linkedin"
+            onClick={() =>
+              window.open("https://www.linkedin.com/in/vitamindev/")
+            }
+          >
+            <div className="tooltip">Linkedin</div>
+            <span>
+              <Image className="logo2" src={linkedin} alt="icon linkedin" />
+            </span>
+          </div>
         </div>
       </div>
 
@@ -239,50 +282,6 @@ export default function MyProfile(props) {
             <div>Born : August 09, 1999</div>
             <div>Email : codertom100@gmail.com</div>
             <div>Phone : 0345000921</div>
-
-            <div className="wrapper flex">
-              <div
-                className="icon facebook"
-                onClick={() =>
-                  window.open("https://www.facebook.com/nt.thien.9899/")
-                }
-              >
-                <div className="tooltip">Facebook</div>
-                <span>
-                  <Image className="logo2" src={face} alt="icon face" />
-                </span>
-              </div>
-              <div
-                className="icon github"
-                onClick={() => window.open("https://github.com/vitamindevplus")}
-              >
-                <div className="tooltip">GitHub</div>
-                <span>
-                  <Image className="logo2" src={github} alt="icon github" />
-                </span>
-              </div>
-              <div
-                className="icon twitter"
-                onClick={() => window.open("https://twitter.com/vitamindev100")}
-              >
-                <div className="tooltip">Twitter</div>
-                <span>
-                  <Image className="logo2" src={twitter} alt="icon twitter" />
-                </span>
-              </div>
-
-              <div
-                className="icon linkedin"
-                onClick={() =>
-                  window.open("https://www.linkedin.com/in/vitamindev/")
-                }
-              >
-                <div className="tooltip">Linkedin</div>
-                <span>
-                  <Image className="logo2" src={linkedin} alt="icon linkedin" />
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
