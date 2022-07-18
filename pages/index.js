@@ -15,7 +15,7 @@ import MySkill from "./components/MySkill";
 import { getNumFromDateString } from "../utils/blogFunction";
 
 const CustomizeAlert = ({ messge }) => {
-  return <div className="bg-green-300 p-2 rounded mb-4">{messge}</div>;
+  return <div className="p-2 mb-4 bg-green-300 rounded">{messge}</div>;
 };
 
 export default function MyProfile(props) {
@@ -221,7 +221,7 @@ export default function MyProfile(props) {
           I am <span className="text-orange-300">a web developer</span> <br />
           in Hanoi !
         </div>
-        <div className="wrapper flex justify-center">
+        <div className="flex justify-center wrapper">
           <div
             className="icon facebook"
             onClick={() =>
@@ -274,7 +274,8 @@ export default function MyProfile(props) {
             <div>I want to be a web developer and web designer</div>
             <div>
               My hobbies are playing sports, playing music, listening to music,
-              watching movies, traveling and love someone who loves me.
+              watching movies, take pictures and videos of the landscape, love
+              someone who loves me.
             </div>
           </div>
           <div className="pt-10 about__info">
@@ -434,7 +435,7 @@ export default function MyProfile(props) {
               </div>
 
               {error && (
-                <h2 className="text-red-500 mb-4">
+                <h2 className="mb-4 text-red-500">
                   Input cannot be blank and email must be valid !
                 </h2>
               )}
@@ -443,7 +444,7 @@ export default function MyProfile(props) {
 
               <button
                 onClick={sendEmail}
-                className="p-2 text-white bg-orange-400 rounded flex items-center"
+                className="flex items-center p-2 text-white bg-orange-400 rounded"
               >
                 {loading && (
                   <div className="lds-ring">
