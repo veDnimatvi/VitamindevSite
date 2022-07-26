@@ -436,7 +436,7 @@ export default function MyProfile(props) {
 
               {error && (
                 <h2 className="mb-4 text-red-500">
-                  Input cannot be blank and email must be valid !
+                  Email phải hợp lệ và message không được để trống !
                 </h2>
               )}
 
