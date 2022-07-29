@@ -2,11 +2,11 @@
 slug: custom-hook
 title: Customs Hook trong javascript
 description: "Thiên Nguyễn"
-img: https://dynonguyen.com/wp-content/uploads/2021/09/custom-react-hooks.jpg
+img: https://user-images.githubusercontent.com/107902169/181732855-d4f9f6f1-664f-4cf3-95fd-3995cf45d1da.png
 date: 18 May 2022
 ---
 
-![custom hooks](https://dynonguyen.com/wp-content/uploads/2021/09/custom-react-hooks.jpg)
+![custom-hooks](https://user-images.githubusercontent.com/107902169/181732855-d4f9f6f1-664f-4cf3-95fd-3995cf45d1da.png)
 
 ---
 
