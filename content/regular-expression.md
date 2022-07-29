@@ -2,11 +2,11 @@
 slug: regular-expression
 title: Một số regex thông dùng trong javascript
 description: "Thiên Nguyễn"
-img: https://dynonguyen.com/wp-content/uploads/2021/09/regular-expression.jpg
+img: https://user-images.githubusercontent.com/107902169/181733139-4dae525c-1187-4f75-92fd-767a34f5a0c4.png
 date: 17 May 2022
 ---
 
-![regex](https://dynonguyen.com/wp-content/uploads/2021/09/regular-expression.jpg)
+![regex](https://user-images.githubusercontent.com/107902169/181733139-4dae525c-1187-4f75-92fd-767a34f5a0c4.png)
 
 ---
 
