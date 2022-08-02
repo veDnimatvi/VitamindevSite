@@ -4,7 +4,7 @@ title: Interview VueJS
 category: VueJS
 description: "Thiên Nguyễn"
 img: https://cdn-developer-wp.arc.dev/wp-content/uploads/2022/05/Vue.js%E2%80%A8-Interview-Questions-1128x635.jpg
-date: 11 May 2022
+date: 2 August 2022
 ---
 
 ![Variable JS](https://cdn-developer-wp.arc.dev/wp-content/uploads/2022/05/Vue.js%E2%80%A8-Interview-Questions-1128x635.jpg)
