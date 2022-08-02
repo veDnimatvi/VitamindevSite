@@ -1,6 +1,7 @@
 ---
 slug: key-mapping-reactjs
 title: List and Keys React
+category: ReactJs
 description: "Thiên Nguyễn"
 img: https://i.morioh.com/200626/ec9a9e94.jpg
 date: 10 May 2022

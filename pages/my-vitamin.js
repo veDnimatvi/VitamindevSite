@@ -44,10 +44,13 @@ export default function MyBlog(props) {
             >
               <div className="relative cursor-pointer">
                 <img src={blog?.img} />
-                <div className="date">{blog?.date}</div>
-                <div className="blogTitle">{blog?.title}</div>
-                <div className="absolute bottom-5 right-5">
-                  {blog?.description}
+                <div className="text-left my-3 text-gray-500">
+                  {blog?.category}
+                </div>
+                <div className="blogTitle my-3 truncate">{blog?.title}</div>
+                <div className="flex justify-between text-gray-500">
+                  <div>{blog?.description}</div>
+                  <div>{blog?.date}</div>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 ---
 slug: local-session-cookie
 title: localStorage, sessionStorage vs Cookie
+category: Javascript
 description: "Thiên Nguyễn"
 img: https://www.loginradius.com/blog/static/05c0a6d7a4539d8f04241b6ddf720a52/03979/blog-banner.png
 date: 13 May 2022
@@ -22,16 +23,19 @@ Tất cả các trình duyệt hiện đại đều hỗ trợ chức năng này
 Về cơ bản, nó như một table trong Excel, nhưng chỉ có hai trường là: key và value.
 
 Để có thể tạo ra 1 localStorge ở trên trình duyệt thì ta thực hiện như sau:
+
 ```
 window.LocalStorage.setItem('name', 'value');
 ```
 
 Để đọc lại giá trị, bạn gọi hàm:
+
 ```
 window.LocalStorage.getItem('name');
 ```
 
 Và để xóa chúng đi:
+
 ```
 window.LocalStorage.clear(); //xóa tất cả
 window.LocalStorage.removeItem('name'); //chỉ xóa phần tử có tên là name
@@ -54,6 +58,7 @@ Session Storage khá giống với Local Storage. Vì chúng đều thuộc về
 Một khuyết điểm của cả localStorage và sessionStorage là có thể bị đọc bởi Javascript. Do đó dễ bị đánh cắp thông tin thông qua một cross-site scriting. Vì vậy, chúng ta không nên lưu trữ những thông tin nhạy cảm như token ID, password, username, email của người dùng vào localStorage hay sessionStorage.
 
 Ví dụ về các hàm:
+
 ```
 // Save data to sessionStorage
 sessionStorage.setItem('key', 'value');
@@ -85,6 +90,7 @@ Một số điểm nổi bật của Cookie so với localStorage và sessionSto
 - Cookie có option để chúng ta set ngày quá hạn cho nó. Nghĩa là có thể định nghĩa khi nào nó tự động xoá được.
 
 Ví dụ hàm set-cookie trong Javascript:
+
 ```
 document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
 ```
@@ -97,6 +103,7 @@ Một số lưu ý khi dùng cookie:
 - Dễ bị đánh cắp thông tin người dùng. Cho nên đừng bao giờ lưu password nguyên gốc của user mà hãy mã hoá nó, hay dùng token-based authentication.
 
 ## Kết luận
+
 - Vì localStorage và sessionStorage được lưu trữ trên trình duyệt của người dùng, nên các bạn cần phải xem xét nội dung lưu trữ có liên quan đến vấn đề bảo mật hay không.
 - Về phạm vi: sessionStorage: giới hạn trong một cửa sổ hoăc thẻ của trình duyệt. Một trang web được mở trong hai thẻ của cùng một trình duyệt cũng không thể truy xuất dữ liệu lẫn nhau. Như vậy, khi bạn đóng trang web thì dữ liệu lưu trong sessionStorage hiện tại cũng bị xóa. Còn localStorage: có thể truy xuất lẫn nhau giữa các cửa sổ trình duyệt. Dữ liệu sẽ được lưu trữ không giới hạn thời gian.
 

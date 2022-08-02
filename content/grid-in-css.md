@@ -1,6 +1,7 @@
 ---
 slug: grid-in-css
 title: CSS Grid Layout
+category: Css
 description: "Thiên Nguyễn"
 img: https://jacekjeznach.com/wp-content/uploads/2021/11/WgUgHhj8Tl64ZsgQfa4G_file-1.jpg
 date: 11 July 2022
@@ -57,38 +58,41 @@ Grid cell là khoảng cách giữa hàng và cột của grid line.
 ## Một số thuộc tính của grid
 
 ### grid-template-columns
+
 Xác định các cột trong grid layout. Các giá trị là kích thước của cột được cách nhau bởi dấu cách.
 
 ```
 .grid-container {
    // Container sẽ được chia đều ra làm 3 phần mỗi cột một phần
    grid-template-columns: 1fr 1fr 1fr;
-   
+
    // Container sẽ có 3 cột với độ rộng tương ứng
    grid-template-columns: 20% 50% 30%;
-   
+
    // Các cột có độ rộng lần lượt là 200px, 150px, 400px
    grid-template-columns: 200px 150px 400px;
 }
 ```
 
 ### grid-template-rows
+
 Xác định các hàng tring grid layout. Các giá trị là kích thước của hàng cách nhau bởi dấu cách
 
 ```
 .grid-container {
    // Container sẽ được chia đều ra làm 3 phần (chiều dọc) mỗi hàng một phần
    grid-template-rows: 1fr 1fr 1fr;
-   
+
    // Container sẽ có 3 hàng với độ cao tương ứng
    grid-template-rows: 20% 50% 30%;
-   
+
    // Các hàng có độ cao lần lượt là 200px, 150px, 400px
    grid-template-rows: 200px 150px 400px;
 }
 ```
 
 ### grid-template-areas
+
 Xác định một template grid giúp căn chỉnh layout một cách trực quan hơn và thường đi kèm với thuộc tính grid-area ở grid-item.
 
 ```
@@ -126,12 +130,11 @@ gap: <grid-row-gap> <grid-column-gap> / <value> (cho cả 2 row và column)
 ### grid-auto-columns và grid-auto-rows
 
 Hai thuộc tính này dùng để chỉ định kích thước của cột hoặc hàng.
-``` grid-auto-columns/rows: min-content | max-content | auto | <value> ```
+`grid-auto-columns/rows: min-content | max-content | auto | <value>`
 
 ### place-items
 
 place-items là shorthand của align-items: start | end | center | stretch (căn theo chiều dọc(column)) và justify-items: start | end | center | stretch (căn theo chiều ngang (row)).
-
 
 ```
 place-items: <align-items> / <justify-items>
@@ -144,6 +147,7 @@ place-items: <align-items> / <justify-items>
 <img src='https://images.viblo.asia/8c9f2f77-63fb-4711-8b54-b926fb97b24b.png' width="500px" height="500px" />
 
 ### grid-columns
+
 Ta sử dụng grid-column để xác định xem cell được CSS có độ dài như thế nào bằng grid-line(line theo chiều dọc).
 
 ```
@@ -162,6 +166,7 @@ Cell đầu tiên kéo dài từ line 1 -> 3 còn cell cuối cùng có độ r�
 <img src='https://images.viblo.asia/e2711236-5210-4cc9-bb6f-c2307ce2b721.png' width="500px" height="500px" />
 
 ### grid-row
+
 Ta sử dụng grid-row để xác định xem cell được CSS có độ cao như thế nào bằng grid-line(line theo chiều dọc).
 
 ```
@@ -177,6 +182,7 @@ Cell đầu tiên có độ dài từ line 1 đến line 3 và chiều cao từ 
 <img src='https://images.viblo.asia/710b1051-f2d8-4ff7-ac3e-5e6106bb63ba.png' width="500px" height="500px" />
 
 ### grid-area
+
 Đưa ra tên được định nghĩa trong template grid-template-areas, grid-item đó sẽ có bố cục giống như trong template.
 
 ```
@@ -217,10 +223,10 @@ Cell đầu tiên có độ dài từ line 1 đến line 3 và chiều cao từ 
 
 <img src='https://images.viblo.asia/fefbb47a-8a8b-4360-841f-f6358fe15f19.png' width="500px" height="500px" />
 
-
 ## Responsive với grid template
 
 HTML
+
 ```
 <div class="grid-container">
     <div class="grid-item">1</div>
@@ -244,6 +250,7 @@ HTML
 ```
 
 CSS
+
 ```
 .grid-container {
     display: grid;
@@ -262,6 +269,7 @@ CSS
     align-items: center;
 }
 ```
+
 Try to see it work very well!
 
 ### Thank for reading and Have nice day !

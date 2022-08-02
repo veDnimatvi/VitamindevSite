@@ -1,6 +1,7 @@
 ---
 slug: bat-dong-bo-trong-js
 title: Đồng bộ và bất đồng bộ trong JS
+category: Javascript
 description: "Thiên Nguyễn"
 img: https://co-well.vn/wp-content/uploads/2021/09/dong-bo-va-bat-dong-bo-javascript-7.jpg
 date: 12 May 2022

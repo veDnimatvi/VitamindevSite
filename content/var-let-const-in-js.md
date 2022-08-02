@@ -1,6 +1,7 @@
 ---
 slug: var-let-const-in-js
 title: Var let const trong javascript
+category: Javascript
 description: "Thiên Nguyễn"
 img: https://thaunguyen.com/blog/wp-content/uploads/2018/02/let.jpeg
 date: 11 May 2022

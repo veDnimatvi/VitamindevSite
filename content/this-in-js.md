@@ -1,6 +1,7 @@
 ---
 slug: this-in-js
 title: Con trỏ This trong javascript
+category: Javascript
 description: "Thiên Nguyễn"
 img: https://codelearn.io/Upload/Blog/con-tro-this-trong-javascript-63733766553.6552.jpg
 date: 12 May 2022

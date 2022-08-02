@@ -1,6 +1,7 @@
 ---
 slug: code-thieu-nhi
 title: Các bài code thiếu nhi trong javascript
+category: Lập trình
 description: "Thiên Nguyễn"
 img: https://product.bachkhoa-aptech.edu.vn:33/Resources/Data/screenshot-2021-07-06-141837-optimized-768x429.png
 date: 23 May 2022
@@ -526,6 +527,7 @@ bark.animal = "dog";
     <li>Điều này là có thể với Javascript, bởi vì function cũng chỉ là object mà thôi! (Mọi primitive types đều là object)
 
 Function là một object đặc biệt. Phần code mà bạn viết không phải là function thực tế đâu. Function ở đây chính là một object với các thuộc tính. Và các thuộc tính này có thể gọi được..</li>
+
   </ul>
 </details>
 

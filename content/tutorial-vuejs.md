@@ -1,6 +1,7 @@
 ---
 slug: tutorial-vuejs
 title: Nhập môn VueJS
+category: VueJs
 description: "Thiên Nguyễn"
 img: https://mevn-public.s3-ap-southeast-1.amazonaws.com/marketenterprise.vn/wp-images/2021/04/06170614/vuejs.png
 date: 25 May 2022
@@ -161,7 +162,7 @@ export default {
 <template>
   <form @submit.prevent="addTodo">
     <input v-model="newTodo">
-    <button>Add Todo</button>    
+    <button>Add Todo</button>
   </form>
   <ul>
     <li v-for="todo in todos" :key="todo.id">
@@ -453,6 +454,7 @@ export default {
 ```
 
 ## Accessing Props
+
 ```
 export default {
   props: {
@@ -509,7 +511,9 @@ export default {
 ```
 
 ## Computed
+
 Creating a readonly computed ref:
+
 ```
 const count = ref(1)
 const plusOne = computed(() => count.value + 1)
@@ -518,7 +522,9 @@ console.log(plusOne.value) // 2
 
 plusOne.value++ // error
 ```
+
 Creating a writable computed ref:
+
 ```
 const count = ref(1)
 const plusOne = computed({
@@ -593,6 +599,5 @@ watch(state, () => {
 ![](https://i.stack.imgur.com/AEbSn.png)
 
 beforeCreate vs create in Composition is setup()
-
 
 <h3 style="text-align: center;">🎉 Congratulations!</span>

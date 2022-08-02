@@ -174,3 +174,9 @@ a {
   display: flex;
   justify-content: center;
 }
+.truncate {
+  width: 230px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

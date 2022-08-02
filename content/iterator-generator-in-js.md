@@ -1,6 +1,7 @@
 ---
 slug: iterator-generator-in-js
 title: Iterator and Generator in JS
+category: Javascript
 description: "Thiên Nguyễn"
 img: https://www.qed42.com/sites/default/files/2021-02/Iterators%20and%20Generators%20in%20JavaScript.png
 date: 12 May 2022

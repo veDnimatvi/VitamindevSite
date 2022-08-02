@@ -1,6 +1,7 @@
 ---
 slug: spring-boot-mail
 title: Spring Email
+category: Java Spring Boot
 description: "Thiên Nguyễn"
 img: https://i.ytimg.com/vi/b3blqONWlYI/maxresdefault.jpg
 date: 08 July 2022
