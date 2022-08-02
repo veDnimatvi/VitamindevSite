@@ -160,7 +160,7 @@ date: 2 August 2022
 | Lúc này template và DOM ảo chưa được mount và render. Hàm created có thể được sử dụng để thao tác với dữ liệu (call api lấy data về ở đây) | Mounted là khi mà chúng ta đã nhìn thấy nội dung ở trên trình duyệt khi gọi api lấy dữ liệu ở đây sẽ trắng màn hình khi component của chúng ta to, cần nhiều thời gian để render khi dữ liệu được lấy về |
  </details>
  
- ## 9. Slot dùng để làm gì và sử dụng như thế nào ?
+ ## 9. Slot và cách sử dụng Slot ?
  <details>
   <summary>Câu trả lời</summary>
   Để chèn nội dung HTML vào bên trong component con Vue.js cung cấp **<slot></slot>** giúp dúng ta làm việc này.
