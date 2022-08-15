@@ -35,24 +35,15 @@ export default function MyBlog(props) {
           </Link>
         </div>
         <p className="welcome">Welcome to My Vitamin</p>
-        <div className="blogs-container">
+        <div>
           {listItems?.map((blog, i) => (
             <div
-              className="blogPost"
+              className="post-item"
               key={i}
               onClick={() => router.push(`/vitamins/${blog?.slug}`)}
             >
-              <div className="relative cursor-pointer">
-                <img src={blog?.img} />
-                <div className="text-left my-3 text-gray-500">
-                  {blog?.category}
-                </div>
-                <div className="blogTitle my-3 truncate">{blog?.title}</div>
-                <div className="flex justify-between text-gray-500">
-                  <div>{blog?.description}</div>
-                  <div>{blog?.date}</div>
-                </div>
-              </div>
+              <div className="blogTitle my-3">{blog?.title}</div>
+              <div className="text-gray-500">{blog?.date}</div>
             </div>
           ))}
         </div>
@@ -66,12 +57,12 @@ export default function MyBlog(props) {
 export const getStaticProps = async () => {
   const fs = require("fs");
 
-  const files = fs.readdirSync(`${process.cwd()}/content`, "utf-8");
+  const files = fs.readdirSync(`${process.cwd()}/content/frontend`, "utf-8");
 
   const blogs = files.filter((fn) => fn.endsWith(".md"));
 
   const data = blogs.map((blog) => {
-    const path = `${process.cwd()}/content/${blog}`;
+    const path = `${process.cwd()}/content/frontend/${blog}`;
     const rawContent = fs.readFileSync(path, {
       encoding: "utf-8",
     });

@@ -81,7 +81,7 @@ export const getServerSideProps = async (context) => {
   const { blog } = context.params;
 
   const content = fs.readFileSync(
-    `${process.cwd()}/content/${blog}.md`,
+    `${process.cwd()}/content/frontend/${blog}.md`,
     "utf8"
   );
 
