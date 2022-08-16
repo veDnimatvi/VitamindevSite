@@ -1,13 +1,12 @@
 import matter from "gray-matter";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import Footer from "./components/Footer";
 import Link from "next/link";
 import iconTurnLeft from "../public/img/turn-to-left-25.png";
 import { getNumFromDateString } from "../utils/blogFunction";
+import PostItem from "./components/PostItem";
 
 export default function MyBlog(props) {
-  const router = useRouter();
   const realData = props?.data?.map((blog) => matter(blog));
   let listItems = realData.map((listItem) => listItem.data);
   //Sort Items Based On Date
@@ -35,22 +34,10 @@ export default function MyBlog(props) {
           </Link>
         </div>
         <p className="welcome">Welcome to My Vitamin</p>
-        <div>
-          {listItems?.map((blog, i) => (
-            <div
-              className="post-item"
-              key={i}
-              onClick={() => router.push(`/vitamins/${blog?.slug}`)}
-            >
-              <div className="blogTitle my-3">{blog?.title}</div>
-              <div className="text-gray-500">{blog?.date}</div>
-            </div>
-          ))}
-        </div>
+        <PostItem listItems={listItems} />
       </div>
       <Footer />
     </section>
-    // </Layout>
   );
 }
 
