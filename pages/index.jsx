@@ -385,7 +385,7 @@ export default function MyProfile(props) {
                 <div
                   className="blog-post"
                   key={i}
-                  onClick={() => router.push(`/vitamins/${blog?.slug}`)}
+                  onClick={() => router.push(`/vitamins/fe/${blog?.slug}`)}
                 >
                   <div className="cursor-pointer">
                     <img src={blog?.img} className="title-img" />
