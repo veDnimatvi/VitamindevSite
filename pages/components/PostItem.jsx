@@ -9,7 +9,13 @@ const PostItem = ({ listItems, typeOfPost }) => {
         <div
           className="post-item"
           key={i}
-          onClick={() => router.push(`/vitamins/${typeOfPost}/${blog?.slug}`)}
+          onClick={() =>
+            router.push(
+              `/${typeOfPost === "fe" ? "vitaminsfe" : "vitaminsbe"}/${
+                blog?.slug
+              }`
+            )
+          }
         >
           <div className="blogTitle my-3">{blog?.title}</div>
           <div className="text-gray-500">{blog?.date}</div>

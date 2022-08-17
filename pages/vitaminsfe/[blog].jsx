@@ -3,12 +3,12 @@ import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
-import Footer from "../../components/Footer";
+import Footer from "../components/Footer";
 import Image from "next/image";
-import face from "../../../public/img/facebook-30.png";
-import twitter from "../../../public/img/twitter-30.png";
-import linkedin from "../../../public/img/linkedin-30.png";
-import iconTurnLeft from "../../../public/img/turn-to-left-25.png";
+import face from "../../public/img/facebook-30.png";
+import twitter from "../../public/img/twitter-30.png";
+import linkedin from "../../public/img/linkedin-30.png";
+import iconTurnLeft from "../../public/img/turn-to-left-25.png";
 import Link from "next/link";
 
 function Blog(props) {
