@@ -61,7 +61,7 @@ export default function MyBlog(props) {
         <div className="post-item text-4xl">
           {typeOfPost === "fe" ? "Front End" : "Back End"}
         </div>
-        <PostItem listItems={listPosts} />
+        <PostItem listItems={listPosts} typeOfPost={typeOfPost} />
       </div>
       <Footer />
     </section>

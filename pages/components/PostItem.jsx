@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-const PostItem = ({ listItems }) => {
+const PostItem = ({ listItems, typeOfPost }) => {
   const router = useRouter();
   return (
     <div>
@@ -9,7 +9,7 @@ const PostItem = ({ listItems }) => {
         <div
           className="post-item"
           key={i}
-          onClick={() => router.push(`/vitamins/${blog?.slug}`)}
+          onClick={() => router.push(`/vitamins/${typeOfPost}/${blog?.slug}`)}
         >
           <div className="blogTitle my-3">{blog?.title}</div>
           <div className="text-gray-500">{blog?.date}</div>
