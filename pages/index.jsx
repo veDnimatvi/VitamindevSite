@@ -399,7 +399,7 @@ export default function MyProfile(props) {
 
             <div
               className="mt-6 cursor-pointer hover:text-orange-400"
-              onClick={() => router.push("/my-vitamin/fe")}
+              onClick={() => router.push("/my-vitamin")}
             >
               More posts &#8811;
             </div>
