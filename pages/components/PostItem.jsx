@@ -11,7 +11,7 @@ const PostItem = ({ listItems, typeOfPost }) => {
           key={i}
           onClick={() =>
             router.push(
-              `/${typeOfPost === "fe" ? "vitaminsfe" : "vitaminsbe"}/${
+              `${typeOfPost === "fe" ? "vitaminsfe" : "vitaminsbe"}/${
                 blog?.slug
               }`
             )
