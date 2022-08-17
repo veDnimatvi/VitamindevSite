@@ -377,7 +377,7 @@ export default function MyProfile(props) {
       <div className="container pt-20 mx-auto section" id="blog">
         <div className="blog">
           <div>
-            <div className="text-3xl">Latest post on my blog</div>
+            <div className="text-3xl">Some post on my blog</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
 
             <div className="blog-container">
@@ -469,12 +469,12 @@ export default function MyProfile(props) {
 export const getStaticProps = async () => {
   const fs = require("fs");
 
-  const files = fs.readdirSync(`${process.cwd()}/content`, "utf-8");
+  const files = fs.readdirSync(`${process.cwd()}/content/frontend`, "utf-8");
 
   const blogs = files.filter((fn) => fn.endsWith(".md"));
 
   const data = blogs.map((blog) => {
-    const path = `${process.cwd()}/content/${blog}`;
+    const path = `${process.cwd()}/content/frontend/${blog}`;
     const rawContent = fs.readFileSync(path, {
       encoding: "utf-8",
     });
