@@ -1,8 +1,5 @@
 import matter from "gray-matter";
-import Image from "next/image";
 import Footer from "./components/Footer";
-import Link from "next/link";
-import iconTurnLeft from "../public/img/turn-to-left-25.png";
 import { getNumFromDateString } from "../utils/blogFunction";
 import PostItem from "./components/PostItem";
 import { useEffect, useState } from "react";
@@ -10,6 +7,8 @@ import Header from "./components/Header";
 
 export default function MyBlog(props) {
   const [listPosts, setListPosts] = useState([]);
+  const [listSearchs, setListSearchs] = useState([]);
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
 
   useEffect(() => {
     const realData = props?.data?.map((blog) => matter(blog));
@@ -24,17 +23,36 @@ export default function MyBlog(props) {
     setListPosts(listItems);
   }, []);
 
+  const searchArticle = (value) => {
+    setIsFirstLoad(false);
+    if (value === "") {
+      setListSearchs(listPosts);
+    } else {
+      const newList = listPosts.filter((item) =>
+        item.title.toLowerCase().includes(value.toLowerCase())
+      );
+      setListSearchs(newList);
+    }
+  };
+
   return (
     // <Layout>
-    <section id="index-page">
+    <section id="index-page" className="flex h-screen flex-col justify-between">
       <Header />
 
-      <div className="main">
-        <div className="mb-10">
-          <div className="text-3xl font-bold">Blog</div>
-          <div className="w-20 h-1 bg-orange-300 rounded"></div>
+      <div className="main mb-auto">
+        <div className="mx-auto mt-20 container">
+          <div className="text-4xl font-bold">All Posts</div>
+          <div className="w-32 h-1 bg-orange-300 rounded"></div>
+          <input
+            className="input-search w-full md:w-1/2"
+            type="text"
+            placeholder="Search articles"
+            onChange={(e) => searchArticle(e.target.value)}
+          />
+          <hr className="my-5" />
         </div>
-        <PostItem listItems={listPosts} />
+        <PostItem listItems={isFirstLoad ? listPosts : listSearchs} />
       </div>
       <Footer />
     </section>

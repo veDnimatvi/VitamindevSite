@@ -45,12 +45,12 @@ const Contact = () => {
     }
   };
   return (
-    <>
+    <div className="flex h-screen flex-col justify-between">
       <Header />
-      <div className="container py-24 mx-auto section">
+      <div className="container mx-auto section">
         <div className="send-me">
-          <div className="mb-10 md:mb-40">
-            <div className="text-3xl font-bold">Contact me</div>
+          <div className="mb-20">
+            <div className="text-4xl font-bold">Contact me</div>
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
           </div>
           <div className="flex justify-center send-me__img">
@@ -101,7 +101,7 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

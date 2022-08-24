@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import face from "../../public/img/facebook-icon.svg";
-import github from "../../public/img/github-icon.svg";
-import linkedin from "../../public/img/linkedin-icon.svg";
-import twitter from "../../public/img/twitter-icon.svg";
-import gmail from "../../public/img/gmail-icon.svg";
+import face from "../../public/img/facebook-icon.png";
+import github from "../../public/img/github-icon.png";
+import linkedin from "../../public/img/linkedin-icon.png";
+import twitter from "../../public/img/twitter-icon.png";
+import gmail from "../../public/img/gmail-icon.png";
 import coffee from "../../public/img/coffee-icon.png";
 
 export default function Footer() {
