@@ -7,9 +7,10 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import face from "../../public/img/facebook-30.png";
 import twitter from "../../public/img/twitter-30.png";
-import linkedin from "../../public/img/linkedin-icon.svg";
+import linkedin from "../../public/img/linkedin-30.png";
 import iconTurnLeft from "../../public/img/turn-to-left-25.png";
 import Link from "next/link";
+import Header from "../components/Header";
 
 function Blog(props) {
   const { data, content } = matter(props.content);
@@ -25,23 +26,9 @@ function Blog(props) {
   return (
     // <Layout>
     <>
+      <Header />
       <div id="blog-post-container">
         <div className="prose main">
-          <div
-            className="flex justify-around pb-5 text-xl text-green-600 cursor-pointer"
-            style={{ fontFamily: '"Noto Serif", serif' }}
-          >
-            <Link href="">
-              <div>
-                Back to My Vitamins
-                <Image
-                  className="mt-1"
-                  src={iconTurnLeft}
-                  alt="turn-left-icon"
-                />
-              </div>
-            </Link>
-          </div>
           <h1 className="header">{data.title}</h1>
           <h3>Share to social</h3>
           <div className="social-share">

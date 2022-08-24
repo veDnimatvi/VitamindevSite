@@ -28,10 +28,12 @@ const Header = () => {
       <div className="navbar-sticky">
         <div className="container flex justify-between mx-auto navbar">
           <div className="float-left pl-8 text-2xl cursor-pointer font-bold">
-            <a className="flex items-center">
-              <Image src={logo} alt="logo" />
-              <span className="pl-2">Vitamindev</span>
-            </a>
+            <Link href="/">
+              <div className="flex items-center">
+                <Image src={logo} alt="logo" />
+                <span className="pl-2">Vitamindev</span>
+              </div>
+            </Link>
           </div>
           <div className="flex float-right menu-desktop ">
             <div className="text-lg cursor-pointer nav-item">

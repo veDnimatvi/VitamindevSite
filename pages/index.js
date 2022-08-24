@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -5,6 +6,11 @@ import Header from "./components/Header";
 export default function MyProfile() {
   return (
     <>
+      <Head>
+        <title>Vitamindev</title>
+        <meta name="Vitamindev" content="Vitamindev Portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header />
 
       <div className="introduce section mb-auto">
