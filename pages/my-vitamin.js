@@ -1,22 +1,27 @@
 import matter from "gray-matter";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import Footer from "./components/Footer";
 import Link from "next/link";
 import iconTurnLeft from "../public/img/turn-to-left-25.png";
 import { getNumFromDateString } from "../utils/blogFunction";
+import PostItem from "./components/PostItem";
+import { useEffect, useState } from "react";
 
 export default function MyBlog(props) {
-  const router = useRouter();
-  const realData = props?.data?.map((blog) => matter(blog));
-  let listItems = realData.map((listItem) => listItem.data);
-  //Sort Items Based On Date
-  listItems = listItems.sort((a, b) => {
-    let aDate = getNumFromDateString(a.date);
-    let bDate = getNumFromDateString(b.date);
+  const [listPosts, setListPosts] = useState([]);
 
-    return bDate - aDate;
-  });
+  useEffect(() => {
+    const realData = props?.data?.map((blog) => matter(blog));
+    let listItems = realData.map((listItem) => listItem.data);
+    //Sort Items Based On Date
+    listItems = listItems.sort((a, b) => {
+      let aDate = getNumFromDateString(a.date);
+      let bDate = getNumFromDateString(b.date);
+
+      return bDate - aDate;
+    });
+    setListPosts(listItems);
+  }, []);
 
   return (
     // <Layout>
@@ -35,27 +40,7 @@ export default function MyBlog(props) {
           </Link>
         </div>
         <p className="welcome">Welcome to My Vitamin</p>
-        <div className="blogs-container">
-          {listItems?.map((blog, i) => (
-            <div
-              className="blogPost"
-              key={i}
-              onClick={() => router.push(`/vitamins/${blog?.slug}`)}
-            >
-              <div className="relative cursor-pointer">
-                <img src={blog?.img} />
-                <div className="text-left my-3 text-gray-500">
-                  {blog?.category}
-                </div>
-                <div className="blogTitle my-3 truncate">{blog?.title}</div>
-                <div className="flex justify-between text-gray-500">
-                  <div>{blog?.description}</div>
-                  <div>{blog?.date}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <PostItem listItems={listPosts} />
       </div>
       <Footer />
     </section>
