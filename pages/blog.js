@@ -6,6 +6,7 @@ import iconTurnLeft from "../public/img/turn-to-left-25.png";
 import { getNumFromDateString } from "../utils/blogFunction";
 import PostItem from "./components/PostItem";
 import { useEffect, useState } from "react";
+import Header from "./components/Header";
 
 export default function MyBlog(props) {
   const [listPosts, setListPosts] = useState([]);
@@ -26,20 +27,13 @@ export default function MyBlog(props) {
   return (
     // <Layout>
     <section id="index-page">
-      {/* <Navbar /> */}
+      <Header />
+
       <div className="main">
-        <div
-          className="flex justify-around pb-5 text-xl text-green-600 cursor-pointer"
-          style={{ fontFamily: '"Noto Serif", serif' }}
-        >
-          <Link href="/">
-            <div>
-              Back to my Profile
-              <Image className="mt-1" src={iconTurnLeft} alt="turn-left-icon" />
-            </div>
-          </Link>
+        <div className="mb-10">
+          <div className="text-3xl font-bold">Blog</div>
+          <div className="w-20 h-1 bg-orange-300 rounded"></div>
         </div>
-        <p className="welcome">Welcome to My Vitamin</p>
         <PostItem listItems={listPosts} />
       </div>
       <Footer />

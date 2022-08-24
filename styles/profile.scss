@@ -1,6 +1,6 @@
 .navbar {
   margin-top: 20px;
-  font-family: "Noto Serif", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .navbar-sticky {
   position: -webkit-sticky;
@@ -17,11 +17,10 @@
 }
 
 .introduce {
-  margin-top: 15px;
-  padding: 200px 0;
-  height: calc(100vh - 0px);
-  font-family: "Noto Serif", serif;
-  background: grey;
+  // margin-top: 15px;
+  // padding: 200px 0;
+  // height: calc(100vh - 0px);
+  font-family: "Noto Sans JP", sans-serif;
   @media all and (max-width: 768px) {
     padding: 50px 0;
   }
@@ -127,40 +126,9 @@
   color: #fff;
 }
 
-.about {
-  font-family: "Noto Serif", serif;
-  box-sizing: border-box;
-
-  padding: 150px 40px 40px 40px;
-
-  &__title {
-    float: left;
-    width: 50%;
-    @media all and (max-width: 768px) {
-      width: 100%;
-    }
-  }
-  &__info {
-    float: left;
-    width: 50%;
-    @media all and (max-width: 768px) {
-      width: 100%;
-    }
-  }
-}
-.resume,
-.skills,
-.project,
 .blog {
   font-family: "Noto Serif", serif;
   padding: 20px 40px;
-}
-
-#resume {
-  margin-top: 13rem;
-  @media all and (max-width: 600px) {
-    margin-top: 20rem;
-  }
 }
 
 .send-me {
@@ -324,45 +292,6 @@
   }
 }
 
-.project-item {
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  padding: 20px 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-.blog-container {
-  margin-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.blog-post {
-  width: 300px;
-  height: 300px;
-  text-align: center;
-  padding: 0 15px;
-  margin: 10px 0;
-  transition: transform 0.2s;
-  background: white;
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-.blog-post > div {
-  background-color: #f2f2f2;
-  padding: 10px 10px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px rgba(206, 204, 204, 0.3);
-  height: 300px;
-}
-.blog-title {
-  font-weight: bold;
-  text-transform: capitalize;
-  font-size: 1rem;
-}
-.blog-date {
-  text-align: start;
-  margin-top: 20px;
-}
 .title-img {
   height: 150px;
   width: 100%;

@@ -129,7 +129,7 @@ export default function Main() {
           className="flex justify-around pb-8 text-xl cursor-pointer text-fuchsia-400"
           style={{ fontFamily: '"Noto Serif", serif' }}
         >
-          <Link href="/my-vitamin">
+          <Link href="">
             <div>Visit to my Vitamin (Blog)</div>
           </Link>
         </div>

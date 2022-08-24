@@ -31,7 +31,7 @@ function Blog(props) {
             className="flex justify-around pb-5 text-xl text-green-600 cursor-pointer"
             style={{ fontFamily: '"Noto Serif", serif' }}
           >
-            <Link href="/my-vitamin">
+            <Link href="">
               <div>
                 Back to My Vitamins
                 <Image
