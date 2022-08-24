@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import face from "../../public/img/facebook-30.png";
 import twitter from "../../public/img/twitter-30.png";
-import linkedin from "../../public/img/linkedin-30.png";
+import linkedin from "../../public/img/linkedin-icon.svg";
 import iconTurnLeft from "../../public/img/turn-to-left-25.png";
 import Link from "next/link";
 

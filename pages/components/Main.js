@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import img from "../../public/img/avatar.jpg";
-import face from "../../public/img/facebook-100.png";
-import github from "../../public/img/github-100.png";
-import linkedin from "../../public/img/linkedin-100.png";
-import twitter from "../../public/img/twitter-100.png";
+import face from "../../public/img/facebook-icon.svg";
+import github from "../../public/img/github-icon.svg";
+import linkedin from "../../public/img/linkedin-icon.svg";
+import twitter from "../../public/img/twitter-icon.svg";
 
 import MySkill from "./MySkill";
 import Hobbies from "./Hobbies";
