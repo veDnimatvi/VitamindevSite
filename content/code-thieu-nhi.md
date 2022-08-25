@@ -2,7 +2,7 @@
 slug: code-thieu-nhi
 title: Các bài code thiếu nhi trong javascript
 category: Lập trình
-description: "Thiên Nguyễn"
+description: "Luyện phỏng vấn cùng code thiếu nhi"
 img: https://product.bachkhoa-aptech.edu.vn:33/Resources/Data/screenshot-2021-07-06-141837-optimized-768x429.png
 date: 23 May 2022
 ---

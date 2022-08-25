@@ -2,7 +2,7 @@
 slug: useMemo-useCallBack
 title: useMemo và useCallBack trong javascript
 category: ReactJs
-description: "Thiên Nguyễn"
+description: "Tìm hiểu và học cách sử dụng useMemo và useCallBack trong javascript"
 img: https://daqxzxzy8xq3u.cloudfront.net/wp-content/uploads/2020/02/04105635/react-usememo-vs-react-usecallback.jpg
 date: 15 May 2022
 ---

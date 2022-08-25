@@ -2,7 +2,7 @@
 slug: event-loop
 title: Event Loop trong javascript
 category: Javascript
-description: "Thiên Nguyễn"
+description: "Nguyên tắc và cách hoạt động của Event Loop trong javascript"
 img: https://blog.alexdevero.com/wp-content/uploads/2020/12/21-12-20-the-javascript-event-loop-explained-blog.jpg
 date: 16 May 2022
 ---

@@ -2,7 +2,7 @@
 slug: key-mapping-reactjs
 title: List and Keys React
 category: ReactJs
-description: "Thiên Nguyễn"
+description: "Tìm hiểu tại sao key luôn cần thiết khi lặp qua một mảng trong ReactJs"
 img: https://i.morioh.com/200626/ec9a9e94.jpg
 date: 10 May 2022
 ---

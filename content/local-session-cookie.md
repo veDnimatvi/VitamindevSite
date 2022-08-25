@@ -2,7 +2,7 @@
 slug: local-session-cookie
 title: localStorage, sessionStorage vs Cookie
 category: Javascript
-description: "Thiên Nguyễn"
+description: "Nguyên tắc hoạt động của localStorage, sessionStorage vs Cookie"
 img: https://www.loginradius.com/blog/static/05c0a6d7a4539d8f04241b6ddf720a52/03979/blog-banner.png
 date: 13 May 2022
 ---

@@ -2,7 +2,7 @@
 slug: custom-hook
 title: Customs Hook trong javascript
 category: ReactJS
-description: "Thiên Nguyễn"
+description: "Tìm hiểu và học cách sử dụng custom-hook"
 img: https://user-images.githubusercontent.com/107902169/181732855-d4f9f6f1-664f-4cf3-95fd-3995cf45d1da.png
 date: 18 May 2022
 ---

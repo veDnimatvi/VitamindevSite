@@ -12,13 +12,18 @@ const PostItem = ({ listItems }) => {
       ) : (
         listItems?.map((blog, i) => (
           <div
-            className="post-item"
+            className="post-item md:flex md:items-start"
             key={i}
             onClick={() => router.push(`/vitamins/${blog?.slug}`)}
           >
-            <div className="blogTitle my-3">{blog?.title}</div>
-            <div className="text-gray-500">{blog?.category}</div>
             <div className="text-gray-500">{blog?.date}</div>
+            <div className="md:ml-10">
+              <div className="blogTitle ">{blog?.title}</div>
+              <div className="text-gray-900 font-semibold">
+                {blog?.description}
+              </div>
+              <div className="text-gray-500">{blog?.category}</div>
+            </div>
           </div>
         ))
       )}

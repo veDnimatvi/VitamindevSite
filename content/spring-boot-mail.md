@@ -2,7 +2,7 @@
 slug: spring-boot-mail
 title: Spring Email
 category: Java Spring Boot
-description: "Thiên Nguyễn"
+description: "Tìm hiểu và học cách sử dụng Spring Email"
 img: https://i.ytimg.com/vi/b3blqONWlYI/maxresdefault.jpg
 date: 08 July 2022
 ---

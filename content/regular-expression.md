@@ -2,7 +2,7 @@
 slug: regular-expression
 title: Một số regex thông dùng trong javascript
 category: Javascript
-description: "Thiên Nguyễn"
+description: "Nơi lưu trữ một số regex thông dùng trong javascript"
 img: https://user-images.githubusercontent.com/107902169/181733139-4dae525c-1187-4f75-92fd-767a34f5a0c4.png
 date: 17 May 2022
 ---

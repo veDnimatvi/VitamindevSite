@@ -2,7 +2,7 @@
 slug: git-cherry-pick
 title: Git nâng cao - Git Cherry Pick
 category: Git
-description: "Thiên Nguyễn"
+description: "Cách sử dụng git Cherry Pick"
 img: https://rubicotech.com/wp-content/uploads/2018/09/Advanced-Git-features-1.jpg
 date: 30 June 2022
 ---

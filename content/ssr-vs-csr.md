@@ -2,7 +2,7 @@
 slug: ssr-vs-csr
 title: sự khác biệt giữa SSR và CSR
 category: Lập trình
-description: "Thiên Nguyễn"
+description: "Tìm hiểu cơ chế hoạt động của serve side rendering và client side rendering"
 img: https://altamira.ai/wp-content/uploads/2022/05/CSR-vs-SSR.png
 date: 29 July 2022
 ---

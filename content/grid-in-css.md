@@ -2,7 +2,7 @@
 slug: grid-in-css
 title: CSS Grid Layout
 category: Css
-description: "Thiên Nguyễn"
+description: "Học cách sử dụng Grid trong CSS"
 img: https://jacekjeznach.com/wp-content/uploads/2021/11/WgUgHhj8Tl64ZsgQfa4G_file-1.jpg
 date: 11 July 2022
 ---

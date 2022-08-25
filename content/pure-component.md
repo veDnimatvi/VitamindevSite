@@ -2,7 +2,7 @@
 slug: pure-component
 title: Pure Component trong ReactJs
 category: ReactJs
-description: "Thiên Nguyễn"
+description: "Tìm hiểu và học cách sử dụng Pure Component trong ReactJs"
 img: https://ireadyoulearn.info/static/d02ee87ed68b95e583603ef5f1d7ba87/5a92f/feature.jpg
 date: 19 May 2022
 ---

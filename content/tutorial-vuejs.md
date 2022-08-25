@@ -2,7 +2,7 @@
 slug: tutorial-vuejs
 title: Nhập môn VueJS
 category: VueJs
-description: "Thiên Nguyễn"
+description: "Tìm hiểu tổng quan về framework Vuejs"
 img: https://mevn-public.s3-ap-southeast-1.amazonaws.com/marketenterprise.vn/wp-images/2021/04/06170614/vuejs.png
 date: 25 May 2022
 ---

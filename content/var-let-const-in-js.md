@@ -2,7 +2,7 @@
 slug: var-let-const-in-js
 title: Var let const trong javascript
 category: Javascript
-description: "Thiên Nguyễn"
+description: "Tìm hiểu và học cách sử dụng khai báo biến với var let const trong javascript"
 img: https://thaunguyen.com/blog/wp-content/uploads/2018/02/let.jpeg
 date: 11 May 2022
 ---
