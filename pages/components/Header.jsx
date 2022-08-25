@@ -40,7 +40,7 @@ const Header = () => {
               <Link href="/">Home</Link>
             </div>
             <div className="ml-12 text-lg cursor-pointer nav-item">
-              <a>About</a>
+              <Link href="/about">About</Link>
             </div>
 
             <div className="ml-12 text-lg cursor-pointer nav-item">
@@ -72,21 +72,24 @@ const Header = () => {
             : "menu-close-first"
         }
       >
-        <div className="mb-12 ml-16 text-xl cursor-pointer mt-28">
-          <a onClick={closeMenu}>Home</a>
+        <div
+          className="mb-12 ml-16 text-xl cursor-pointer mt-28"
+          onClick={closeMenu}
+        >
+          <Link href="/">Home</Link>
         </div>
-        <div className="mb-12 ml-16 text-xl cursor-pointer">
-          <a onClick={closeMenu}>About</a>
+        <div className="mb-12 ml-16 text-xl cursor-pointer" onClick={closeMenu}>
+          <Link href="/about">About</Link>
         </div>
 
-        <div className="mb-12 ml-16 text-xl cursor-pointer">
-          <a onClick={closeMenu}>Project</a>
+        <div className="mb-12 ml-16 text-xl cursor-pointer" onClick={closeMenu}>
+          <a>Project</a>
         </div>
-        <div className="mb-12 ml-16 text-xl cursor-pointer">
-          <a onClick={closeMenu}>Blog</a>
+        <div className="mb-12 ml-16 text-xl cursor-pointer" onClick={closeMenu}>
+          <Link href="/blog">Blog</Link>
         </div>
-        <div className="mb-12 ml-16 text-xl cursor-pointer">
-          <a onClick={closeMenu}>Contact</a>
+        <div className="mb-12 ml-16 text-xl cursor-pointer" onClick={closeMenu}>
+          <Link href="/contact">Contact</Link>
         </div>
       </div>
     </div>
