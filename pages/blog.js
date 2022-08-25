@@ -4,13 +4,21 @@ import { getNumFromDateString } from "../utils/blogFunction";
 import PostItem from "./components/PostItem";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
+import { useRouter } from "next/router";
 
 export default function MyBlog(props) {
+  const router = useRouter();
+
   const [listPosts, setListPosts] = useState([]);
+  const [backupListPosts, setBackupListPosts] = useState([]);
   const [listSearchs, setListSearchs] = useState([]);
+  const [keySearchs, setKeySearchs] = useState("");
   const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const [totalPage, setTotalPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
+    const asPathName = router?.asPath?.split("?");
     const realData = props?.data?.map((blog) => matter(blog));
     let listItems = realData.map((listItem) => listItem.data);
     //Sort Items Based On Date
@@ -20,10 +28,20 @@ export default function MyBlog(props) {
 
       return bDate - aDate;
     });
-    setListPosts(listItems);
+    setBackupListPosts(listItems);
+    if (asPathName?.length > 1) {
+      let pageNumber = Number(asPathName?.[1]?.split("=")[1]);
+      setCurrentPage(pageNumber);
+      setListPosts(listItems.slice((pageNumber - 1) * 10, pageNumber * 10));
+    } else {
+      setListPosts(listItems.slice(0, 10));
+    }
+
+    setTotalPage(Math.ceil(listItems?.length / 10));
   }, []);
 
   const searchArticle = (value) => {
+    setKeySearchs(value);
     setIsFirstLoad(false);
     if (value === "") {
       setListSearchs(listPosts);
@@ -33,6 +51,16 @@ export default function MyBlog(props) {
       );
       setListSearchs(newList);
     }
+  };
+
+  const changePage = (page) => {
+    setCurrentPage(page);
+    router.replace({
+      pathname: "/blog",
+      query: { page: page },
+    });
+
+    setListPosts(backupListPosts.slice((page - 1) * 10, page * 10));
   };
 
   return (
@@ -53,6 +81,34 @@ export default function MyBlog(props) {
           <hr className="my-5" />
         </div>
         <PostItem listItems={isFirstLoad ? listPosts : listSearchs} />
+
+        {!keySearchs && (
+          <div className="flex justify-between font-semibold text-lg mt-10">
+            <div
+              className={
+                currentPage === 1
+                  ? "cursor-pointer disable-div"
+                  : "cursor-pointer"
+              }
+              onClick={() => changePage(currentPage - 1)}
+            >
+              Previous
+            </div>
+            <div>
+              {currentPage} of {totalPage}
+            </div>
+            <div
+              className={
+                currentPage === totalPage
+                  ? "cursor-pointer disable-div"
+                  : "cursor-pointer"
+              }
+              onClick={() => changePage(currentPage + 1)}
+            >
+              Next
+            </div>
+          </div>
+        )}
       </div>
       <Footer />
     </section>

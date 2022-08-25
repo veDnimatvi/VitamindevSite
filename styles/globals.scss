@@ -161,3 +161,8 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.disable-div {
+  pointer-events: none;
+  opacity: 0.4;
+}
