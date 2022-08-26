@@ -96,7 +96,7 @@ const About = () => {
         </div>
 
         <div className="md:flex mx-10">
-          <div className="md:mx-5 about-left">
+          <div className="md:mx-5 about-left flex flex-col justify-center">
             <div className="flex justify-center">
               <div className="my-avatar">
                 <Image
@@ -114,11 +114,11 @@ const About = () => {
               </div>
             </div>
 
-            <div className="text-center text-2xl font-semibold">
+            {/* <div className="text-center text-2xl font-semibold">
               Nguyễn Thanh Thiên
             </div>
             <div className="text-center text-xl">Web Developer</div>
-            <div className="text-center text-xl">Hà nội</div>
+            <div className="text-center text-xl">Hà nội</div> */}
           </div>
           <div className="md:mx-32 about-right">
             <p className="text-lg mb-6">
