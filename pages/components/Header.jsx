@@ -44,9 +44,6 @@ const Header = () => {
             </div>
 
             <div className="ml-12 text-lg cursor-pointer nav-item">
-              <a>Project</a>
-            </div>
-            <div className="ml-12 text-lg cursor-pointer nav-item">
               <Link href="/blog">Blog</Link>
             </div>
             <div className="ml-12 text-lg cursor-pointer nav-item">
@@ -82,9 +79,6 @@ const Header = () => {
           <Link href="/about">About</Link>
         </div>
 
-        <div className="mb-12 ml-16 text-xl cursor-pointer" onClick={closeMenu}>
-          <a>Project</a>
-        </div>
         <div className="mb-12 ml-16 text-xl cursor-pointer" onClick={closeMenu}>
           <Link href="/blog">Blog</Link>
         </div>

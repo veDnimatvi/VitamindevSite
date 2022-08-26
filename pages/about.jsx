@@ -117,29 +117,30 @@ const About = () => {
             <div className="text-center text-2xl font-semibold">
               Nguyễn Thanh Thiên
             </div>
-            <div className="text-center text-xl">Junior Software Engineer</div>
+            <div className="text-center text-xl">Web Developer</div>
             <div className="text-center text-xl">Hà nội</div>
           </div>
           <div className="md:mx-32 about-right">
             <p className="text-lg mb-6">
-              Tôi tốt nghiệp nghành ký thuật phần mềm tại trường đại học Công
-              Nghiệp Hà Nội vào tháng 7 năm 2021.
+              Tôi là Thiên, chủ nhân của blog này. Hiện đang sinh sống và làm
+              việc tại Thành phố Hà nội. Ở blog này tôi chia sẻ những gì mình
+              biết đến mọi người. Vì tôi biết cách tiếp thu kiến thức tốt nhất
+              là chia sẻ. Tôi có hơn 1 năm kinh nghiệm trong lập trình front-end
+              với đa dạng framework của javascript như ReactJS, AngularJs và
+              VueJS
             </p>
+
             <p className="text-lg mb-6">
-              Vào cuối năm 2020 tôi bắt đầu đi tìm nơi thực tập. Và tôi gia nhập
-              HiveTech vào giữa tháng 12 năm 2020. Tôi đã tham gia nhiều dự án
-              trong và ngoài nước với lĩnh vực Frontend developer với đa dạng
-              các framework của javascript như ReactJS, AngularJs và VueJS.
-            </p>
-            <p className="text-lg mb-6">
-              Tôi là một người sáng tạo, kỷ luật, ham học hỏi. Mục tiêu tương
-              lai tôi muốn học thêm Java và trở thành Full Stack.
+              Tôi là một người thích sáng tạo, kỷ luật, ham học hỏi. Trong tương
+              lai tôi muốn học thêm về ngôn ngữ Java để có thể làm được cả
+              frontend và backend.
             </p>
             <p className="text-lg mb-6">
               Sở thích của tôi là chơi thể thao, xem phim, nghe nhạc, học nhạc,
-              du lịch bụi, nhiếp ảnh phong cảnh
+              du lịch bụi, nhiếp ảnh phong cảnh. Chúng ta có thể kết bạn với
+              nhau. Info tôi để ở phần footer bên dưới.
             </p>
-            <p className="text-lg mb-6">Xem thêm về cv của tôi tại đây</p>
+            <p className="text-lg mb-6">Download MyCV</p>
             <div className="text-xl mb-3">My Skills</div>
             <div className="flex flex-wrap">
               {listSkills &&

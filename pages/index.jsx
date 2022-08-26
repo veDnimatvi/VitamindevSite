@@ -19,12 +19,10 @@ export default function MyProfile() {
             <div className="text-4xl md:text-5xl font-extrabold mb-5">
               Hi, I am Thiên
             </div>
-            <div className="text-xl md:text-2xl mb-5">
-              Junior Software Engineer
-            </div>
+            <div className="text-xl md:text-2xl mb-5">Web developer</div>
             <div className="text-lg md:text-xl">
               Read more{" "}
-              <Link href="">
+              <Link href="/about">
                 <span className="bg-orange-300 p-1 rounded-tl-2xl rounded-br-2xl cursor-pointer">
                   about me
                 </span>
