@@ -41,7 +41,8 @@
 }
 
 .main {
-  margin: 20px auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
@@ -70,4 +71,16 @@
   cursor: pointer;
   border-radius: 5px;
   font-family: "Noto Serif", serif;
+}
+
+.input-search {
+  border: 1px solid #e5e5e5;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  &:focus {
+    border: 2px solid rgb(6, 182, 212);
+    padding: 9px;
+  }
 }
