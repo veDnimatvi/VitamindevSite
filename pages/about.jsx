@@ -107,18 +107,12 @@ const About = () => {
                   height={150}
                 />
                 <div className="text">
-                  <p className="font-bold text-black">
+                  <p className="font-bold">
                     Nguyễn Thanh Thiên - Web Developer -{" "}
                   </p>
                 </div>
               </div>
             </div>
-
-            {/* <div className="text-center text-2xl font-semibold">
-              Nguyễn Thanh Thiên
-            </div>
-            <div className="text-center text-xl">Web Developer</div>
-            <div className="text-center text-xl">Hà nội</div> */}
           </div>
           <div className="md:mx-32 about-right">
             <p className="text-lg mb-6">

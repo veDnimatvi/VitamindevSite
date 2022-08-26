@@ -4,6 +4,8 @@
 @import "./header.scss";
 @import "./blog.scss";
 @import "./profile.scss";
+@import "./dark.scss";
+@import "./light.scss";
 
 html,
 body {
@@ -11,6 +13,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--background-color);
+  color: var(--color);
 }
 
 html {
