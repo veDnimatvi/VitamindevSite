@@ -44,6 +44,7 @@ const Contact = () => {
         .catch((err) => console.log("err", err));
     }
   };
+
   return (
     <div className="flex h-screen flex-col justify-between">
       <Header />
@@ -60,6 +61,7 @@ const Contact = () => {
             <div className="send-me__form">
               <div className="send-me__form__input">
                 <input
+                  className="text-black"
                   type="text"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -68,6 +70,7 @@ const Contact = () => {
               </div>
               <div className="send-me__form__input">
                 <textarea
+                  className="text-black"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Your message ..."

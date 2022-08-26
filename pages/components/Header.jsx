@@ -1,16 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../public/img/mylogo.svg";
-import menuIcon from "../../public/img/icons-menu.svg";
+import menuIcon from "../../public/img/menu-30.png";
+import menuLightIcon from "../../public/img/menu-icon.png";
+import moonIcon from "../../public/img/moon-icon.png";
+import sunIcon from "../../public/img/summer-icon.png";
 
 const Header = () => {
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
   const [isFirstLoad, setisFirstLoad] = useState(false);
+  const [mode, setMode] = useState();
+
+  useEffect(() => {
+    setMode(sessionStorage.getItem("theme"));
+    document
+      .getElementsByTagName("HTML")[0]
+      .setAttribute("data-theme", sessionStorage.getItem("theme"));
+  }, []);
 
   const handleMenuMobile = () => {
     setOpenMenuMobile(!openMenuMobile);
     setisFirstLoad(true);
+  };
+
+  const toggleThemeChange = () => {
+    if (sessionStorage.getItem("theme") === "dark") {
+      sessionStorage.setItem("theme", "light");
+      setMode("light");
+      document
+        .getElementsByTagName("HTML")[0]
+        .setAttribute("data-theme", "light");
+    } else {
+      sessionStorage.setItem("theme", "dark");
+      setMode("dark");
+      document
+        .getElementsByTagName("HTML")[0]
+        .setAttribute("data-theme", "dark");
+    }
   };
 
   const closeMenu = () => setOpenMenuMobile(false);
@@ -27,7 +54,7 @@ const Header = () => {
       )}
       <div className="navbar-sticky">
         <div className="container flex justify-between mx-auto navbar">
-          <div className="float-left pl-8 text-2xl cursor-pointer font-bold">
+          <div className="float-left mt-1 md:mt-0 pl-8 text-2xl cursor-pointer font-bold">
             <Link href="/">
               <div className="flex items-center">
                 <Image src={logo} alt="logo" />
@@ -49,13 +76,28 @@ const Header = () => {
             <div className="ml-12 text-lg cursor-pointer nav-item">
               <Link href="/contact">Contact</Link>
             </div>
+            <div
+              className="mb-12 ml-10 text-xl cursor-pointer"
+              onClick={toggleThemeChange}
+            >
+              <Image
+                src={mode === "dark" ? sunIcon : moonIcon}
+                alt="mode icon"
+              />
+            </div>
           </div>
 
-          <div
-            className="float-right pt-1 mr-4 menu-icon"
-            onClick={handleMenuMobile}
-          >
-            <Image src={menuIcon} alt="menu icon" />
+          <div className="float-right pt-1 mr-4 menu-icon flex items-center">
+            <Image
+              src={mode === "dark" ? sunIcon : moonIcon}
+              alt="mode icon"
+              onClick={toggleThemeChange}
+            />
+            <Image
+              src={mode === "dark" ? menuLightIcon : menuIcon}
+              alt="menu icon"
+              onClick={handleMenuMobile}
+            />
           </div>
         </div>
       </div>

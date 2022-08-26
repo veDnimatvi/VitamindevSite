@@ -1,4 +1,3 @@
-import React from "react";
 import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
@@ -21,12 +20,16 @@ function Blog(props) {
   const socialShareFaceBook = (type) => {
     window.open(`${SOCIAL_SHARE[type]}${window.location.href}`);
   };
+
   return (
     // <Layout>
     <>
       <Header />
       <div id="blog-post-container">
-        <div className="prose main">
+        <div
+          className="prose main"
+          style={{ background: "rgb(250, 250, 250)" }}
+        >
           <h1 className="header">{data.title}</h1>
           <h3>Share to social</h3>
           <div className="social-share">
