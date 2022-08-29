@@ -69,7 +69,7 @@ export default function MyBlog(props) {
       <Header />
 
       <div className="main mb-auto">
-        <div className="mx-auto mt-20 container">
+        <div className="mx-auto container">
           <div className="text-4xl font-bold">All Posts</div>
           <div className="w-32 h-1 bg-orange-300 rounded"></div>
           <input
