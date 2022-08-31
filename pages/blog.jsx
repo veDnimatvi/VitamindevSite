@@ -65,7 +65,7 @@ export default function MyBlog(props) {
 
   return (
     // <Layout>
-    <section id="index-page" className="flex h-screen flex-col justify-between">
+    <section className="flex h-screen flex-col justify-between">
       <Header />
 
       <div className="main mb-auto">
