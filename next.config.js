@@ -2,8 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["www.monterail.com"],
+    // domains: ["www.monterail.com"],
     // domains: ["localhost"],
+    loader: "custom",
   },
 };
 

@@ -8,6 +8,7 @@ import face from "../../public/img/facebook-30.png";
 import twitter from "../../public/img/twitter-30.png";
 import linkedin from "../../public/img/linkedin-30.png";
 import Header from "../components/Header";
+const imageLoader = require("../../utils/loader");
 
 function Blog(props) {
   const { data, content } = matter(props.content);
@@ -34,16 +35,19 @@ function Blog(props) {
           <h3>Share to social</h3>
           <div className="social-share">
             <Image
+              loader={imageLoader}
               src={face}
               alt="icon face"
               onClick={() => socialShareFaceBook("FACEBOOK")}
             />
             <Image
+              loader={imageLoader}
               src={twitter}
               alt="icon twitter"
               onClick={() => socialShareFaceBook("TWITTER")}
             />
             <Image
+              loader={imageLoader}
               src={linkedin}
               alt="icon linkedin"
               onClick={() => socialShareFaceBook("LINKEDIN")}

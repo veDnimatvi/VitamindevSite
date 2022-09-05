@@ -6,6 +6,7 @@ import menuIcon from "../../public/img/menu-30.png";
 import menuLightIcon from "../../public/img/menu-icon.png";
 import moonIcon from "../../public/img/moon-icon.png";
 import sunIcon from "../../public/img/summer-icon.png";
+const imageLoader = require("../../utils/loader");
 
 const Header = () => {
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
@@ -54,10 +55,10 @@ const Header = () => {
       )}
       <div className="navbar-sticky">
         <div className="container flex justify-between mx-auto navbar">
-          <div className="float-left mt-1 md:mt-0 pl-8 text-2xl cursor-pointer font-bold">
+          <div className="float-left pl-8 mt-1 text-2xl font-bold cursor-pointer md:mt-0">
             <Link href="/">
               <div className="flex items-center">
-                <Image src={logo} alt="logo" />
+                <Image loader={imageLoader} src={logo} alt="logo" />
                 <span className="pl-2">Vitamindev</span>
               </div>
             </Link>
@@ -81,19 +82,22 @@ const Header = () => {
               onClick={toggleThemeChange}
             >
               <Image
+                loader={imageLoader}
                 src={mode === "dark" ? sunIcon : moonIcon}
                 alt="mode icon"
               />
             </div>
           </div>
 
-          <div className="float-right pt-1 mr-4 menu-icon flex items-center">
+          <div className="flex items-center float-right pt-1 mr-4 menu-icon">
             <Image
+              loader={imageLoader}
               src={mode === "dark" ? sunIcon : moonIcon}
               alt="mode icon"
               onClick={toggleThemeChange}
             />
             <Image
+              loader={imageLoader}
               src={mode === "dark" ? menuLightIcon : menuIcon}
               alt="menu icon"
               onClick={handleMenuMobile}

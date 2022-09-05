@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import img from "../public/img/new-avatar.jpg";
+const imageLoader = require("../utils/loader");
 
 const About = () => {
   const listSkills = [
@@ -87,19 +88,20 @@ const About = () => {
   }, []);
 
   return (
-    <div className="flex h-screen flex-col justify-between">
+    <div className="flex flex-col justify-between h-screen">
       <Header />
       <div className="container mx-auto">
-        <div className="mb-20 mx-10">
+        <div className="mx-10 mb-20">
           <div className="text-4xl font-bold">About me</div>
           <div className="w-40 h-1 bg-orange-300 rounded"></div>
         </div>
 
-        <div className="md:flex mx-10">
-          <div className="md:mx-5 about-left flex flex-col justify-center">
+        <div className="mx-10 md:flex">
+          <div className="flex flex-col justify-center md:mx-5 about-left">
             <div className="flex justify-center">
               <div className="my-avatar">
                 <Image
+                  loader={imageLoader}
                   className="logo2"
                   src={img}
                   alt="a"
@@ -115,7 +117,7 @@ const About = () => {
             </div>
           </div>
           <div className="md:mx-32 about-right">
-            <p className="text-lg mb-6">
+            <p className="mb-6 text-lg">
               Tôi là Thiên, chủ nhân của blog này. Hiện đang sinh sống và làm
               việc tại Thành phố Hà nội. Ở blog này tôi chia sẻ những gì mình
               biết đến mọi người. Vì tôi biết cách tiếp thu kiến thức tốt nhất
@@ -124,25 +126,25 @@ const About = () => {
               VueJS
             </p>
 
-            <p className="text-lg mb-6">
+            <p className="mb-6 text-lg">
               Tôi là một người thích sáng tạo, kỷ luật, ham học hỏi. Trong tương
               lai tôi muốn học thêm về ngôn ngữ Java để có thể làm được cả
               frontend và backend.
             </p>
-            <p className="text-lg mb-6">
+            <p className="mb-6 text-lg">
               Sở thích của tôi là chơi thể thao, xem phim, nghe nhạc, học nhạc,
               du lịch bụi, nhiếp ảnh phong cảnh. Chúng ta có thể kết bạn với
               nhau. Info tôi để ở phần footer bên dưới.
             </p>
-            <p className="text-lg mb-6">Download MyCV</p>
-            <div className="text-xl mb-3">My Skills</div>
+            <p className="mb-6 text-lg">Download MyCV</p>
+            <div className="mb-3 text-xl">My Skills</div>
             <div className="flex flex-wrap">
               {listSkills &&
                 listSkills?.map((item, index) => {
                   return (
                     <span
                       key={index}
-                      className="mr-2 mb-2 rounded-sm px-2 py-1 text-xs font-medium text-white"
+                      className="px-2 py-1 mb-2 mr-2 text-xs font-medium text-white rounded-sm"
                       style={{ background: item.bg }}
                     >
                       {item.name}

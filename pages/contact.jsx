@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import sendMessageImg from "../public/img/contact-me.svg";
 import axios from "axios";
+const imageLoader = require("../utils/loader");
 
 const CustomizeAlert = ({ messge }) => {
   return <div className="p-2 mb-4 bg-green-300 rounded">{messge}</div>;
@@ -46,7 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex h-screen flex-col justify-between">
+    <div className="flex flex-col justify-between h-screen">
       <Header />
       <div className="container mx-auto section">
         <div className="send-me">
@@ -55,7 +56,11 @@ const Contact = () => {
             <div className="w-40 h-1 bg-orange-300 rounded"></div>
           </div>
           <div className="flex justify-center send-me__img">
-            <Image src={sendMessageImg} alt="send message img" />
+            <Image
+              loader={imageLoader}
+              src={sendMessageImg}
+              alt="send message img"
+            />
           </div>
           <div className="flex justify-center">
             <div className="send-me__form">

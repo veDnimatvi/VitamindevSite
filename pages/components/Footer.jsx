@@ -6,6 +6,7 @@ import linkedin from "../../public/img/linkedin-icon.png";
 import twitter from "../../public/img/twitter-icon.png";
 import gmail from "../../public/img/gmail-icon.png";
 import coffee from "../../public/img/coffee-icon.png";
+const imageLoader = require("../../utils/loader");
 
 export default function Footer() {
   return (
@@ -17,7 +18,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={face} alt="icon face" />
+            <Image loader={imageLoader} src={face} alt="icon face" />
           </a>
         </div>
         <div className="mr-5 cursor-pointer">
@@ -26,7 +27,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={github} alt="icon github" />
+            <Image loader={imageLoader} src={github} alt="icon github" />
           </a>
         </div>
         <div className="mr-5 cursor-pointer">
@@ -35,7 +36,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={twitter} alt="icon twitter" />
+            <Image loader={imageLoader} src={twitter} alt="icon twitter" />
           </a>
         </div>
         <div className="mr-5 cursor-pointer">
@@ -44,19 +45,19 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={linkedin} alt="icon linkedin" />
+            <Image loader={imageLoader} src={linkedin} alt="icon linkedin" />
           </a>
         </div>
         <div className="mr-5 cursor-pointer">
           <a href="mailto:codertom100@gmail.com">
-            <Image src={gmail} alt="icon linkedin" />
+            <Image loader={imageLoader} src={gmail} alt="icon linkedin" />
           </a>
         </div>
         <div className="cursor-pointer">
-          <Image src={coffee} alt="icon linkedin" />
+          <Image loader={imageLoader} src={coffee} alt="icon linkedin" />
         </div>
       </div>
-      <div className="text-center font-semibold">©2022 by Thiên Nguyễn</div>
+      <div className="font-semibold text-center">©2022 by Thiên Nguyễn</div>
     </div>
   );
 }
