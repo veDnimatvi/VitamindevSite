@@ -134,6 +134,20 @@ const About = () => {
               du lịch bụi, nhiếp ảnh phong cảnh. Chúng ta có thể kết bạn với
               nhau. Info tôi để ở phần footer bên dưới.
             </p>
+            <p className="text-lg mb-6">
+              Nếu bạn cần một website hãy liên hệ với tôi qua số điện thoại
+              (zalo) :{" "}
+              <a className="text-blue-500" href="tel:+84345000921">
+                0345000921
+              </a>{" "}
+              hoặc qua{" "}
+              <a
+                className="text-blue-500"
+                href="https://www.facebook.com/nt.thien.9899/"
+              >
+                FaceBook
+              </a>
+            </p>
             <p className="text-lg mb-6">Download MyCV</p>
             <div className="text-xl mb-3">My Skills</div>
             <div className="flex flex-wrap">
