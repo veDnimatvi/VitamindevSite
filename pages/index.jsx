@@ -11,25 +11,25 @@ export default function MyProfile() {
         <meta name="Vitamindev" content="Vitamindev Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex h-screen flex-col justify-between">
+      <div className="flex flex-col justify-between h-screen">
         <Header />
 
-        <div className="introduce section mb-auto">
-          <div className="mx-auto container py-40 md:py-64 pl-11 md:pl-80">
-            <div className="text-4xl md:text-5xl font-extrabold mb-5">
+        <div className="mb-auto introduce section" data-aos="fade-up">
+          <div className="container py-40 mx-auto md:py-64 pl-11 md:pl-80">
+            <div className="mb-5 text-4xl font-extrabold md:text-5xl">
               Hi, I am Thiên
             </div>
-            <div className="text-xl md:text-2xl mb-5">Web developer</div>
+            <div className="mb-5 text-xl md:text-2xl">Web developer</div>
             <div className="text-lg md:text-xl">
               Read more{" "}
               <Link href="/about">
-                <span className="bg-orange-300 p-1 rounded-tl-2xl rounded-br-2xl cursor-pointer">
+                <span className="p-1 bg-orange-300 cursor-pointer rounded-tl-2xl rounded-br-2xl">
                   about me
                 </span>
               </Link>{" "}
               or{" "}
               <Link href="/contact">
-                <span className="bg-violet-300 p-1 rounded-tr-2xl rounded-bl-2xl cursor-pointer">
+                <span className="p-1 cursor-pointer bg-violet-300 rounded-tr-2xl rounded-bl-2xl">
                   contact me
                 </span>
               </Link>{" "}

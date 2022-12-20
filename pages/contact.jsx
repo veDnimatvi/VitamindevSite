@@ -52,9 +52,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex h-screen flex-col justify-between">
+    <div className="flex flex-col justify-between h-screen">
       <Header />
-      <div className="container mx-auto section">
+      <div className="container mx-auto section" data-aos="fade-up">
         <div className="send-me">
           <div className="mb-20">
             <div className="text-4xl font-bold">Contact me</div>

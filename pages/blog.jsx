@@ -65,15 +65,15 @@ export default function MyBlog(props) {
 
   return (
     // <Layout>
-    <section className="flex h-screen flex-col justify-between">
+    <section className="flex flex-col justify-between h-screen">
       <Header />
 
-      <div className="main mb-auto">
-        <div className="mx-auto container">
+      <div className="mb-auto main" data-aos="fade-up">
+        <div className="container mx-auto">
           <div className="text-4xl font-bold">All Posts</div>
           <div className="w-32 h-1 bg-orange-300 rounded"></div>
           <input
-            className="input-search w-full md:w-1/2"
+            className="w-full input-search md:w-1/2"
             type="text"
             placeholder="Search articles"
             onChange={(e) => searchArticle(e.target.value)}
@@ -83,7 +83,7 @@ export default function MyBlog(props) {
         <PostItem listItems={isFirstLoad ? listPosts : listSearchs} />
 
         {!keySearchs && (
-          <div className="flex justify-between font-semibold text-lg mt-10">
+          <div className="flex justify-between mt-10 text-lg font-semibold">
             <div
               className={
                 currentPage === 1
