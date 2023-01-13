@@ -121,13 +121,12 @@ const About = () => {
               biết đến mọi người. Vì tôi biết cách tiếp thu kiến thức tốt nhất
               là chia sẻ. Tôi có hơn 1 năm kinh nghiệm trong lập trình front-end
               với đa dạng framework của javascript như ReactJS, AngularJs và
-              VueJS
+              VueJS. Kiến thức về lập trình back-end với NodeJs sử dụng
+              framework NestJs.
             </p>
 
             <p className="mb-6 text-lg">
-              Tôi là một người thích sáng tạo, kỷ luật, ham học hỏi. Trong tương
-              lai tôi muốn học thêm về ngôn ngữ Java để có thể làm được cả
-              frontend và backend.
+              Tôi là một người thích sáng tạo, kỷ luật, ham học hỏi.
             </p>
             <p className="mb-6 text-lg">
               Sở thích của tôi là chơi thể thao, xem phim, nghe nhạc, học nhạc,
