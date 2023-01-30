@@ -63,16 +63,16 @@ const About = () => {
       name: "Figma",
     },
     {
-      bg: "rgb(237, 139, 0)",
-      name: "Java",
-    },
-    {
       bg: "rgb(109, 179, 63)",
-      name: "SpringBoot",
+      name: "NodeJs",
     },
     {
-      bg: "rgb(1, 82, 158)",
-      name: "Mariadb",
+      bg: "rgb(224, 35, 78)",
+      name: "NestJs",
+    },
+    {
+      bg: "rgb(0, 104, 74)",
+      name: "MongoDB",
     },
   ];
   useEffect(() => {
