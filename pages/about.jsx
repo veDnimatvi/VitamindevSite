@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import img from "../public/img/new-avatar.jpg";
+import img from "../public/img/avatar.png";
 
 const About = () => {
   const listSkills = [
@@ -67,10 +67,6 @@ const About = () => {
       name: "NodeJs",
     },
     {
-      bg: "rgb(224, 35, 78)",
-      name: "NestJs",
-    },
-    {
       bg: "rgb(0, 104, 74)",
       name: "MongoDB",
     },
@@ -121,8 +117,7 @@ const About = () => {
               biết đến mọi người. Vì tôi biết cách tiếp thu kiến thức tốt nhất
               là chia sẻ. Tôi có hơn 1 năm kinh nghiệm trong lập trình front-end
               với đa dạng framework của javascript như ReactJS, AngularJs và
-              VueJS. Kiến thức về lập trình back-end với NodeJs sử dụng
-              framework NestJs.
+              VueJS. Kiến thức về lập trình back-end với NodeJs.
             </p>
 
             <p className="mb-6 text-lg">
@@ -130,8 +125,7 @@ const About = () => {
             </p>
             <p className="mb-6 text-lg">
               Sở thích của tôi là chơi thể thao, xem phim, nghe nhạc, học nhạc,
-              du lịch bụi, nhiếp ảnh phong cảnh. Chúng ta có thể kết bạn với
-              nhau. Info tôi để ở phần footer bên dưới.
+              du lịch bụi, nhiếp ảnh phong cảnh.
             </p>
             <p className="mb-6 text-lg">
               Nếu bạn cần một website hãy liên hệ với tôi qua số điện thoại
@@ -147,7 +141,14 @@ const About = () => {
                 FaceBook
               </a>
             </p>
-            <p className="mb-6 text-lg">Download MyCV</p>
+            <a
+              href="https://drive.google.com/file/d/1sgCbJbNo4A4LOFY7aV9EPzFHLyKmJj2d/view?usp=share_link"
+              target="_blank"
+              className="mb-6 text-lg text-blue-500 underline"
+              rel="noreferrer"
+            >
+              Download MyCV
+            </a>
             <div className="mb-3 text-xl">My Skills</div>
             <div className="flex flex-wrap">
               {listSkills &&
