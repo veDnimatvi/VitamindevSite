@@ -40,3 +40,39 @@ a {
   pointer-events: none;
   opacity: 0.4;
 }
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: #fff;
+}
+
+.modal-bank {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.modal-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.font-ibm {
+  font-family: "IBM Plex Mono", monospace;
+}
