@@ -80,6 +80,7 @@
   color: #000;
   animation-name: open;
   animation-duration: 0.5s;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .menu-close {
@@ -96,6 +97,7 @@
   color: #000;
   animation-name: close;
   animation-duration: 0.5s;
+  font-family: "IBM Plex Mono", monospace;
 }
 .menu-close-first {
   position: -webkit-sticky;
