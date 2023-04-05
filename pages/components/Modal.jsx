@@ -14,12 +14,10 @@ const Modal = ({ show, setShowModal }) => {
           <div className="mr-1">Buy me a coffee</div>
           <Image src={coffee} alt="coffee" />
         </div>
-        <div className="text-center text-lg font-semibold font-ibm">
+        <div className="text-center text-lg font-semibold">
           Nguyen Thanh Thien
         </div>
-        <div className="text-center text-lg font-semibold font-ibm">
-          0404 7563 801
-        </div>
+        <div className="text-center text-lg font-semibold">0404 7563 801</div>
         <Image className="modal-bank" src={bank} alt="bank" />
 
         <div className="flex justify-center">

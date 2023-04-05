@@ -92,7 +92,7 @@ const About = () => {
         </div>
 
         <div className="mx-10 md:flex">
-          <div className="flex flex-col justify-center md:mx-5 about-left">
+          <div className="flex flex-col justify-center md:mx-5">
             <div className="flex justify-center">
               <div className="my-avatar">
                 <Image
@@ -110,7 +110,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="md:mx-32 about-right">
+          <div className="md:mx-32">
             <p className="mb-6 text-lg">
               Tôi là Thiên, chủ nhân của blog này. Hiện đang sinh sống và làm
               việc tại Thành phố Hà nội. Ở blog này tôi chia sẻ những gì mình
