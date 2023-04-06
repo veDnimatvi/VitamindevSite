@@ -1,6 +1,5 @@
 import matter from "gray-matter";
 import Footer from "./components/Footer";
-import { getNumFromDateString } from "../utils/blogFunction";
 import PostItem from "./components/PostItem";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
@@ -23,10 +22,7 @@ export default function MyBlog(props) {
     let listItems = realData.map((listItem) => listItem.data);
     //Sort Items Based On Date
     listItems = listItems.sort((a, b) => {
-      let aDate = getNumFromDateString(a.date);
-      let bDate = getNumFromDateString(b.date);
-
-      return bDate - aDate;
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
     setBackupListPosts(listItems);
     if (asPathName?.length > 1) {
