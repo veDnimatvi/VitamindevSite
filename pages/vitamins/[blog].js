@@ -32,7 +32,10 @@ function Blog(props) {
     // <Layout>
     <>
       <Header />
-      <motion.div className="progress-bar" style={{ scaleX }} />
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
       <div id="blog-post-container">
         <div
           className="prose main"
