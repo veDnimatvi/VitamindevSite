@@ -8,9 +8,16 @@ import face from "../../public/img/facebook-30.png";
 import twitter from "../../public/img/twitter-30.png";
 import linkedin from "../../public/img/linkedin-30.png";
 import Header from "../components/Header";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 function Blog(props) {
   const { data, content } = matter(props.content);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   const SOCIAL_SHARE = {
     FACEBOOK: "https://www.facebook.com/sharer.php?u=",
     LINKEDIN: "https://www.linkedin.com/shareArticle?mini=true&url=",
@@ -25,6 +32,7 @@ function Blog(props) {
     // <Layout>
     <>
       <Header />
+      <motion.div className="progress-bar" style={{ scaleX }} />
       <div id="blog-post-container">
         <div
           className="prose main"

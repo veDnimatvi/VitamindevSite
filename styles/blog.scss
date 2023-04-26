@@ -62,3 +62,13 @@
     padding: 9px;
   }
 }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: rgb(207, 100, 12);
+  transform-origin: 0%;
+}
