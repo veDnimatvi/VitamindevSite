@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         <div className="mr-5 cursor-pointer">
           <a
-            href="https://github.com/vitamindevplus"
+            href="https://github.com/codeninzza"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
         <div className="mr-5 cursor-pointer">
           <a
-            href="https://www.linkedin.com/in/vitamindev/"
+            href="www.linkedin.com/in/codeninzza/"
             target="_blank"
             rel="noopener noreferrer"
           >
