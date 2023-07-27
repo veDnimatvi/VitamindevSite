@@ -44,7 +44,7 @@ const About = () => {
     },
     {
       bg: "rgb(221, 0, 49)",
-      name: "AngularJs",
+      name: "Angular",
     },
     {
       bg: "rgb(1, 112, 254)",
@@ -116,12 +116,12 @@ const About = () => {
               việc tại Thành phố Hà nội. Ở blog này tôi chia sẻ những gì mình
               biết đến mọi người. Vì tôi biết cách tiếp thu kiến thức tốt nhất
               là chia sẻ. Tôi có hơn 2 năm kinh nghiệm trong lập trình front-end
-              với đa dạng framework của javascript như ReactJS, AngularJs và
+              với đa dạng framework của javascript như ReactJS, Angular và
               VueJS. Kiến thức về lập trình back-end với NodeJs.
             </p>
 
             <p className="mb-6 text-lg">
-              Tôi là một người thích sáng tạo, kỷ luật, ham học hỏi.
+              Tôi là một người sáng tạo, kỷ luật, ham học hỏi.
             </p>
             <p className="mb-6 text-lg">
               Sở thích của tôi là chơi thể thao, xem phim, nghe nhạc, học nhạc,
