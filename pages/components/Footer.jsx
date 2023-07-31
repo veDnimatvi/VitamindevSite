@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
         <div className="mr-5 cursor-pointer">
           <a
-            href="https://www.linkedin.com/in/codeninzza/"
+            href="https://www.linkedin.com/in/vitamindev/"
             target="_blank"
             rel="noopener noreferrer"
           >
