@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         <div className="mr-5 cursor-pointer">
           <a
-            href="https://github.com/codeninzza"
+            href="https://github.com/veDnimatvi"
             target="_blank"
             rel="noopener noreferrer"
           >
