@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import { useRouter } from "next/router";
 
+const limitItems = 5;
+
 export default function MyBlog(props) {
   const router = useRouter();
 
@@ -28,12 +30,12 @@ export default function MyBlog(props) {
     if (asPathName?.length > 1) {
       let pageNumber = Number(asPathName?.[1]?.split("=")[1]);
       setCurrentPage(pageNumber);
-      setListPosts(listItems.slice((pageNumber - 1) * 10, pageNumber * 10));
+      setListPosts(listItems.slice((pageNumber - 1) * limitItems, pageNumber * limitItems));
     } else {
-      setListPosts(listItems.slice(0, 10));
+      setListPosts(listItems.slice(0, limitItems));
     }
 
-    setTotalPage(Math.ceil(listItems?.length / 10));
+    setTotalPage(Math.ceil(listItems?.length / limitItems));
   }, []);
 
   const searchArticle = (value) => {
@@ -56,7 +58,7 @@ export default function MyBlog(props) {
       query: { page: page },
     });
 
-    setListPosts(backupListPosts.slice((page - 1) * 10, page * 10));
+    setListPosts(backupListPosts.slice((page - 1) * limitItems, page * limitItems));
   };
 
   return (
