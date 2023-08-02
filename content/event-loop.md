@@ -6,14 +6,7 @@ description: "Nguyên tắc và cách hoạt động của Event Loop trong java
 img: https://blog.alexdevero.com/wp-content/uploads/2020/12/21-12-20-the-javascript-event-loop-explained-blog.jpg
 date: 16 May 2022
 ---
-
-![Event Loop](https://blog.alexdevero.com/wp-content/uploads/2020/12/21-12-20-the-javascript-event-loop-explained-blog.jpg)
-
----
-
-# Even Loop là gì?
-
-## Call Stack trong Event Loop là gì?
+### Call Stack trong Event Loop là gì?
 
 Mỗi khi 1 hàm được gọi thì nó sẽ được đẩy vào một hàng đợi đặc biệt gọi là stack. Stack là 1 hàng đợi kiểu LIFO(Last In Firt Out) nghĩa là vào sau cùng thì ra đầu tiên. Một hàm chỉ được lấy ra khỏi stack khi nó đã hoàn thành và return.
 
@@ -31,11 +24,11 @@ function Foo(){
 Foo()
 ```
 
-## Callback Queue trong Event Loop là gì?
+### Callback Queue trong Event Loop là gì?
 
 Chứa các đối tượng làm việc theo cơ chế FIFO(First In First Out) nghĩa là vào trước thì ra trước.
 
-## Cách hoạt động của Event Loop
+### Cách hoạt động của Event Loop
 
 Nhiệm vụ của Event loop rất đơn giản đó là đọc Stack và Event Queue. Nếu nhận thấy Stack rỗng nó sẽ nhặt Event đầu tiên trong Event Queue và Handler (callback hoặc listener) gắn với event đó và đẩy vào Stack.
 
@@ -46,7 +39,7 @@ Nhiệm vụ của Event loop rất đơn giản đó là đọc Stack và Event
 JS Runtime còn thao tác với một callback queue hay event queue. Event queue này khác với stack ở chỗ nó là queue kiểu FIFO (First In First Out).
 Mỗi khi có một Event được tạo ra, ví dụ user click vào một Button thì một Event sẽ được đẩy vào Event queue cùng với một handler (event listener) gắn với nó. Nếu một Event không có listener thì nó sẽ bị mất và không được đẩy vào Event queue.
 
-## Ví dụ Event Loop
+### Ví dụ Event Loop
 
 ```
 const foo = () => console.log("First");
@@ -69,11 +62,9 @@ Trình tự thực thi như sau:
 - Baz() log ra "Third". Event Loop phát hiện stack trống sau khi Baz() được hoàn thành và xoá khỏi stack. Vậy nên hàm setTImeout được đẩy vào stack.
 - Hàm setTimeout log ra "Second".
 
-## Kết luận
+### Kết luận
 
 - Công việc của Event loop là theo dõi stack(có cơ chế LIFO) và ngó qua Task queue(có cơ chế FIFO), nếu stack trống thì lấy callback trong task queue đẩy vào stack.
 - Event Queue chỉ được đọc khi Stack trống rỗng.
 - Bất kì web APIs nào cũng sẽ đưa callback queue khi nó hoàn thành.
 - Tham số thứ 2 của setTimeout là thời gian tối thiểu để một Event được đẩy vào Stack và chạy chứ không phải là thời gian chính xác nó sẽ được chạy.
-
-### Thank for reading and Have nice day !

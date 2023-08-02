@@ -41,7 +41,6 @@ function Blog(props) {
           className="prose main"
           style={{ background: "rgb(250, 250, 250)" }}
         >
-          <h1 className="header">{data.title}</h1>
           <h3>Share to social</h3>
           <div className="social-share">
             <Image
@@ -60,6 +59,7 @@ function Blog(props) {
               onClick={() => socialShareFaceBook("LINKEDIN")}
             />
           </div>
+          <h1 className="header">{data.title}</h1>
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw]}

@@ -7,10 +7,6 @@ img: https://product.bachkhoa-aptech.edu.vn:33/Resources/Data/screenshot-2021-07
 date: 23 May 2022
 ---
 
-![Code Kid](https://product.bachkhoa-aptech.edu.vn:33/Resources/Data/screenshot-2021-07-06-141837-optimized-768x429.png)
-
----
-
 ### 1. Kết quả là gì?
 
 ```
