@@ -1,8 +1,8 @@
 ---
 slug: webpack
-title: What is the Webpack ?
+title: Webpack
 category: Lập trình
-description: "Webpack is a free and open-source module bundler for JavaScript."
+description: "Webpack là mã nguồn mở và miễn phí dành cho JavaScript"
 img: https://i0.wp.com/wptavern.com/wp-content/uploads/2017/10/Screen-Shot-2017-10-11-at-6.51.54-PM.png?ssl=1
 date: 11 April 2023
 ---
