@@ -23,7 +23,7 @@ export default function MyProfile() {
       <div className="flex flex-col justify-between h-screen">
         <Header />
 
-        <div className="mb-auto introduce section" data-aos="fade-up">
+        <div className="mb-auto section" data-aos="fade-up">
           <div className="container py-40 mx-auto md:py-64 pl-11 md:pl-80">
             <div className="mb-5 text-4xl font-extrabold md:text-5xl">
               Hi, I am Thiên
