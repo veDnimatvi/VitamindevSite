@@ -1,8 +1,8 @@
 ---
 slug: charset
-title: The charset declared (UTF-8) is declared correctly.
+title: (UTF-8) trong HTML
 category: HTML
-description: "The charset declared (UTF-8) is declared correctly."
+description: Cách sử dụng meta (UTF-8) trong HTML
 img: https://robialakbar.com/wp-content/uploads/2021/01/pos-fungsi-meta-charset-utf-8-html-l.jpg
 date: 5 April 2023
 ---
