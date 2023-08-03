@@ -1,8 +1,8 @@
 ---
 slug: viewport
-title: The viewport in HTML
+title: Viewport
 category: HTML
-description: "The viewport is declared correctly"
+description: Cách sử dụng viewport trong HTML
 img: https://s3-us-west-2.amazonaws.com/devcodepro/media/tutorials/meta-viewport-html5-t1.png
 date: 6 April 2023
 ---
