@@ -1,8 +1,8 @@
 ---
 slug: doctype
-title: The Doctype is HTML5 and is at the top of all your HTML pages
+title: Thẻ Doctype trong HTML5
 category: HTML
-description: "The Doctype is HTML5 and is at the top of all your HTML pages"
+description: Ý nghĩa của thẻ Doctype trong HTML5
 img: https://www.pluralsight.com/content/pluralsight/en/blog/creative-professional/wha/whats-stuff-top-html5-document/_jcr_content/main/hero_blog_block/image-res.img.jpg/1527709379553.jpg
 date: 4 April 2023
 ---
