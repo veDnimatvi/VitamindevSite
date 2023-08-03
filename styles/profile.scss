@@ -58,10 +58,12 @@
   from {
     left: 0;
     right: 100px;
+    display: block;
   }
   to {
     left: -300px;
     right: 400px;
+    display: block;
   }
 }
 .menu-open {
@@ -85,6 +87,7 @@
 }
 
 .menu-close {
+  display: none;
   padding-top: 50px;
   position: -webkit-sticky;
   position: fixed;
@@ -100,15 +103,7 @@
   animation-duration: 0.5s;
 }
 .menu-close-first {
-  position: -webkit-sticky;
-  position: fixed;
-  top: 80px;
-  bottom: 0;
-  left: -300px;
-  padding: 20px;
-  z-index: 3;
-  background: #4d4748;
-  color: #fff;
+  display: none;
 }
 
 .send-me {
