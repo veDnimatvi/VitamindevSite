@@ -7,8 +7,9 @@ date: 3 Aug 2023
 ---
 ### So sánh Cookie, Local Storage và Session Storage
 
-| Dạng lưu trữ | Đều là string |
+| ---- | ---- |
 |:-------|:------|
+| **Dạng lưu trữ** | Đều là string |
 |  **Được gửi chung với browser**  |  - Cookie: Đối với mỗi một request được gửi đi từ client thì những dữ liệu được lưu trong cookie cũng được gửi kèm ở trong phần header của request đó <br /> - LocalStorage và SessionStorage thì không  |
 |  **Kích thước dữ liệu có thể lưu trữ**  |  - Cookie: 4KB <br /> - LocalStorage: 10MB  <br /> - SessionStorage: 5MB  <br /> Và cũng có thể tùy theo từng trình duyệt lưu lượng của LocalStorage và SessionStorage sẽ khác nhau |
 | **Khả năng hỗ trợ HTML** | - Cookie: HTML4/ HTML5, Trước khi chưa có HTML5 thì cách duy nhất để lưu trữ dữ liệu trên browser đó là lưu trên cookie<br /> - LocalStorage: HTML5 <br /> - SessionStorage: HTML5 |
