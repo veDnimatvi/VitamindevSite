@@ -7,8 +7,17 @@ export default function MyProfile() {
   return (
     <>
       <Head>
+        <meta charset="UTF-8" />
         <title>Vitamindev</title>
         <meta name="Vitamindev" content="Vitamindev Portfolio" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <meta
+          name="Vitamindev"
+          content="Kiên thức lập trình, front-end, back-end"
+        ></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col justify-between h-screen">

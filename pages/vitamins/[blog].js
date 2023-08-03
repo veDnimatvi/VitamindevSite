@@ -9,6 +9,7 @@ import twitter from "../../public/img/twitter-30.png";
 import linkedin from "../../public/img/linkedin-30.png";
 import Header from "../components/Header";
 import { motion, useScroll, useSpring } from "framer-motion";
+import Head from "next/head";
 
 function Blog(props) {
   const { data, content } = matter(props.content);
@@ -31,6 +32,10 @@ function Blog(props) {
   return (
     // <Layout>
     <>
+      <Head>
+        <title>{data.title}</title>
+        <meta name="Vitamindev" content={data.title} />
+      </Head>
       <Header />
       <motion.div
         className="progress-bar"
