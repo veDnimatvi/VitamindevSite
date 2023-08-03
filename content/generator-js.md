@@ -1,8 +1,8 @@
 ---
 slug: generator-js
-title: Generation function, Interables và Iterators trong Javascript ?
+title: Generation function, Interables và Iterators
 category: Javascript
-description: Generation function, Interables và Iterators trong JavaScript."
+description: Cách sử dụng generation function, interables và iterators trong JavaScript
 date: 3 Aug 2023
 ---
 ## Generator function
