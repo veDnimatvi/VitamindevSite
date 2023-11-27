@@ -7,7 +7,7 @@ export default function MyProfile() {
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <title>Vitamindev</title>
         <meta name="Vitamindev" content="Vitamindev Portfolio" />
         <meta
