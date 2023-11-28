@@ -112,26 +112,26 @@ const Header = () => {
         }
       >
         <div
-          className="px-6 py-5 text-xl duration-500 cursor-pointer mt-28 hover:bg-white hover:text-black"
+          className="py-5 pl-6 mt-48 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
           onClick={closeMenu}
         >
           <Link href="/">Home</Link>
         </div>
         <div
-          className="px-6 py-5 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
+          className="py-5 pl-6 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
           onClick={closeMenu}
         >
           <Link href="/about">About</Link>
         </div>
 
         <div
-          className="px-6 py-5 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
+          className="py-5 pl-6 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
           onClick={closeMenu}
         >
           <Link href="/blog">Blog</Link>
         </div>
         <div
-          className="px-6 py-5 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
+          className="py-5 pl-6 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
           onClick={closeMenu}
         >
           <Link href="/contact">Contact</Link>
