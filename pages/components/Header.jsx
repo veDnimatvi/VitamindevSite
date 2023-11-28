@@ -54,7 +54,7 @@ const Header = () => {
       )}
       <div className="navbar-sticky">
         <div className="container flex justify-between mx-auto navbar">
-          <div className="float-left mt-1 md:mt-0 pl-8 text-2xl cursor-pointer font-bold">
+          <div className="float-left pl-8 mt-1 text-2xl font-bold cursor-pointer md:mt-0">
             <Link href="/">
               <div className="flex items-center">
                 <Image src={logo} alt="logo" />
@@ -87,7 +87,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="float-right pt-1 mr-4 menu-icon flex items-center">
+          <div className="flex items-center float-right pt-1 mr-4 cursor-pointer menu-icon">
             <Image
               src={mode === "dark" ? sunIcon : moonIcon}
               alt="mode icon"
@@ -112,19 +112,28 @@ const Header = () => {
         }
       >
         <div
-          className="mb-12 ml-16 text-xl cursor-pointer mt-28"
+          className="px-6 py-5 text-xl duration-500 cursor-pointer mt-28 hover:bg-white hover:text-black"
           onClick={closeMenu}
         >
           <Link href="/">Home</Link>
         </div>
-        <div className="mb-12 ml-16 text-xl cursor-pointer" onClick={closeMenu}>
+        <div
+          className="px-6 py-5 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
+          onClick={closeMenu}
+        >
           <Link href="/about">About</Link>
         </div>
 
-        <div className="mb-12 ml-16 text-xl cursor-pointer" onClick={closeMenu}>
+        <div
+          className="px-6 py-5 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
+          onClick={closeMenu}
+        >
           <Link href="/blog">Blog</Link>
         </div>
-        <div className="mb-12 ml-16 text-xl cursor-pointer" onClick={closeMenu}>
+        <div
+          className="px-6 py-5 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
+          onClick={closeMenu}
+        >
           <Link href="/contact">Contact</Link>
         </div>
       </div>
