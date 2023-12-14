@@ -107,11 +107,22 @@ console.log(Boolean(x()));
   <h4>Đáp án: A</h5>
   <h4>Lý giải</h4>
   <ul>
-  	<li>let k = (typeof x).length => k trả về 1 string với giá trị là "function". Vậy k = "function".length = 8</li>
+    <li>x là argument. nhận x gần nhất. k phải function</li>
+  	<li>let k = (typeof x).length => k trả về 1 string với giá trị là "object". Vậy k = "object".length = 6</li>
   	<li>let z = { y: y }; khai báo 1 obj với {y: hàm y = () => "freetut".length;} Vậy z.y() = "freetut".length = 7</li>
-  	<li>k - z.y() = 8 - 7 = 1. Vậy x() trả về giá trị là 1</li>
-  	<li>Boolean(1) = true</li>
+  	<li>k - z.y() = 6 - 7 = -1. Vậy x() trả về giá trị là -1</li>
+  	<li>Boolean(-1) = true</li>
   </ul>
+<code>
+  const a = function (...x) {
+    let k = (typeof a).length;
+    let y = () => "freetut".length;
+    let z = { y: y };
+    return k - z.y();
+  };
+</code>
+
+Như này x() mới = 1
 </details>
 
 ### 4. Kết quả là gì?
