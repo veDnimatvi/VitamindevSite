@@ -122,7 +122,7 @@ console.log(Boolean(x()));
   };
 </code>
 
-Như này x() mới = 1
+Như này typeof a = "function" x() = 1
 </details>
 
 ### 4. Kết quả là gì?
