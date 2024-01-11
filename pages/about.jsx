@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import img from "../public/img/avatar.jpg";
+import img from "../public/img/avatar.png";
 
 const About = () => {
   const listSkills = [
