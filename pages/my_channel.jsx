@@ -60,7 +60,12 @@ const MyChanel = () => {
                   <li>Phân quyền cho user, staff, admin.</li>
                 </ul>
 
-                <div className="flex items-center gap-2 p-3 mt-4 text-white duration-300 ease-in-out rounded bg-stone-800 w-max hover:scale-110">
+                <div
+                  className="flex items-center gap-2 p-3 mt-4 text-white duration-300 ease-in-out rounded bg-stone-800 w-max hover:scale-110"
+                  onClick={() =>
+                    window.open("https://www.youtube.com/watch?v=tikI2VbHX6k")
+                  }
+                >
                   <Image src={youtube} alt="youtube" />
                   <div>Xem Trên Youtube</div>
                 </div>
@@ -117,7 +122,12 @@ const MyChanel = () => {
                   <li>Phân quyền cho user, staff, admin.</li>
                 </ul>
 
-                <div className="flex items-center gap-2 p-3 mt-4 text-white duration-300 ease-in-out rounded bg-stone-800 w-max hover:scale-110">
+                <div
+                  className="flex items-center gap-2 p-3 mt-4 text-white duration-300 ease-in-out rounded bg-stone-800 w-max hover:scale-110"
+                  onClick={() =>
+                    window.open("https://www.youtube.com/watch?v=ay9pXgJxUB8")
+                  }
+                >
                   <Image src={youtube} alt="youtube" />
                   <div>Xem Trên Youtube</div>
                 </div>
