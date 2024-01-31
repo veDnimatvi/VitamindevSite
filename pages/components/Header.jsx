@@ -74,6 +74,9 @@ const Header = () => {
               <Link href="/blog">Blog</Link>
             </div>
             <div className="ml-12 text-lg cursor-pointer nav-item">
+              <Link href="/my_channel">Youtube Channel</Link>
+            </div>
+            <div className="ml-12 text-lg cursor-pointer nav-item">
               <Link href="/contact">Contact</Link>
             </div>
             <div
@@ -129,6 +132,12 @@ const Header = () => {
           onClick={closeMenu}
         >
           <Link href="/blog">Blog</Link>
+        </div>
+        <div
+          className="py-5 pl-6 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
+          onClick={closeMenu}
+        >
+          <Link href="/my_channel">Youtube Channel</Link>
         </div>
         <div
           className="py-5 pl-6 text-xl duration-500 cursor-pointer hover:bg-white hover:text-black"
