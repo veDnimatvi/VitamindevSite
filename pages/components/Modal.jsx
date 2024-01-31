@@ -11,18 +11,20 @@ const Modal = ({ show, setShowModal }) => {
     <div className="modal">
       <div className="modal-content">
         <div className="modal-title">
-          <div className="mr-1">Buy me a coffee</div>
+          <div className="mr-1">Buy Vitamindev a coffee</div>
           <Image src={coffee} alt="coffee" />
         </div>
-        <div className="text-center text-lg font-semibold">
+        <div className="text-lg font-semibold text-center">
           Nguyen Thanh Thien
         </div>
-        <div className="text-center text-lg font-semibold">0404 7563 801</div>
-        <Image className="modal-bank" src={bank} alt="bank" />
+        <div className="text-lg font-semibold text-center">0404 7563 801</div>
+        <div className="flex justify-center">
+          <Image width={250} height={300} src={bank} alt="bank" />
+        </div>
 
         <div className="flex justify-center">
           <button
-            className="bg-red-400 text-white px-6 py-2 rounded my-4"
+            className="px-6 py-2 my-4 text-white bg-red-400 rounded"
             onClick={() => setShowModal(!show)}
           >
             Đóng

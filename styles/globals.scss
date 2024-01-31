@@ -56,12 +56,8 @@ a {
 .modal-content {
   width: 500px;
   background-color: #fff;
-}
-
-.modal-bank {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
+  border-radius: 1rem;
+  padding: 2rem 0;
 }
 
 .modal-title {
