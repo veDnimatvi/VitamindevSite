@@ -13,7 +13,6 @@ const Header = () => {
   const [isFirstLoad, setisFirstLoad] = useState(false);
   const [mode, setMode] = useState();
   const router = useRouter();
-  console.log("🚀 ~ Header ~ router:", router?.asPath?.split("/")?.[1]);
 
   useEffect(() => {
     setMode(sessionStorage.getItem("theme"));
@@ -69,7 +68,7 @@ const Header = () => {
             <div className="text-lg cursor-pointer">
               <div
                 className={
-                  router?.asPath?.split("/")?.[1] === ""
+                  router?.pathname === "/"
                     ? "border-b-4 border-solid border-orange-500"
                     : ""
                 }
@@ -80,7 +79,7 @@ const Header = () => {
             <div className="ml-12 text-lg cursor-pointer">
               <div
                 className={
-                  router?.asPath?.split("/")?.[1] === "about"
+                  router?.pathname === "/about"
                     ? "border-b-4 border-solid border-orange-500"
                     : ""
                 }
@@ -92,8 +91,8 @@ const Header = () => {
             <div className="ml-12 text-lg cursor-pointer">
               <div
                 className={
-                  router?.asPath?.split("/")?.[1] === "blog" ||
-                  router?.asPath?.split("/")?.[1] === "vitamins"
+                  router?.pathname === "/blog" ||
+                  router?.pathname === "/vitamins/[blog]"
                     ? "border-b-4 border-solid border-orange-500"
                     : ""
                 }
@@ -104,7 +103,7 @@ const Header = () => {
             <div className="ml-12 text-lg cursor-pointer">
               <div
                 className={
-                  router?.asPath?.split("/")?.[1] === "my_channel"
+                  router?.pathname === "/my_channel"
                     ? "border-b-4 border-solid border-orange-500"
                     : ""
                 }
@@ -115,7 +114,7 @@ const Header = () => {
             <div className="ml-12 text-lg cursor-pointer">
               <div
                 className={
-                  router?.asPath?.split("/")?.[1] === "contact"
+                  router?.pathname === "/contact"
                     ? "border-b-4 border-solid border-orange-500"
                     : ""
                 }
