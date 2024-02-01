@@ -14,15 +14,6 @@ export default function Footer() {
       <div className="flex justify-center">
         <div className="mr-5 cursor-pointer">
           <a
-            href="https://www.facebook.com/nt.thien.9899/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={face} alt="icon face" />
-          </a>
-        </div>
-        <div className="mr-5 cursor-pointer">
-          <a
             href="https://github.com/veDnimatvi"
             target="_blank"
             rel="noopener noreferrer"
