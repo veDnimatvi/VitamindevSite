@@ -133,13 +133,6 @@ const About = () => {
               <a className="text-blue-500" href="tel:+84345000921">
                 0345000921
               </a>{" "}
-              hoặc qua{" "}
-              <a
-                className="text-blue-500"
-                href="https://www.facebook.com/nt.thien.9899/"
-              >
-                FaceBook
-              </a>
             </p>
             <a
               href="https://drive.google.com/file/d/1SYgDuz8MTNUVHvIKwBsqh7VxfmHUhuXJ/view?usp=sharing"
