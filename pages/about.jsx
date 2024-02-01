@@ -121,18 +121,13 @@ const About = () => {
             </p>
 
             <p className="mb-6 text-lg">
-              Tôi là một người sáng tạo, kỷ luật, ham học hỏi.
-            </p>
-            <p className="mb-6 text-lg">
-              Sở thích của tôi là chơi thể thao, xem phim, nghe nhạc, học nhạc,
-              du lịch bụi, nhiếp ảnh phong cảnh.
-            </p>
-            <p className="mb-6 text-lg">
               Nếu bạn cần một website hãy liên hệ với tôi qua số điện thoại
               (zalo) :{" "}
               <a className="text-blue-500" href="tel:+84345000921">
                 0345000921
-              </a>{" "}
+              </a>{" "} hoặc qua Fanpage <a className="text-blue-500" href="https://www.facebook.com/vitamindev">
+                FanPage VitaminDev
+              </a>
             </p>
             <a
               href="https://drive.google.com/file/d/1SYgDuz8MTNUVHvIKwBsqh7VxfmHUhuXJ/view?usp=sharing"
