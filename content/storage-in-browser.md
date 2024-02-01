@@ -1,7 +1,7 @@
 ---
 slug: storage-in-browser
 title: Storage trong Browser
-category: Lập trình
+category: Web Browser
 description: So sánh Cookie, Local Storage và Session Storage
 date: 3 Aug 2023
 ---
