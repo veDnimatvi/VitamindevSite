@@ -6,11 +6,14 @@ import menuIcon from "../../public/img/menu-30.png";
 import menuLightIcon from "../../public/img/menu-icon.png";
 import moonIcon from "../../public/img/moon-icon.png";
 import sunIcon from "../../public/img/summer-icon.png";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
   const [isFirstLoad, setisFirstLoad] = useState(false);
   const [mode, setMode] = useState();
+  const router = useRouter();
+  console.log("🚀 ~ Header ~ router:", router?.asPath?.split("/")?.[1]);
 
   useEffect(() => {
     setMode(sessionStorage.getItem("theme"));
@@ -63,21 +66,62 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex float-right menu-desktop ">
-            <div className="text-lg cursor-pointer nav-item">
-              <Link href="/">Home</Link>
+            <div className="text-lg cursor-pointer">
+              <div
+                className={
+                  router?.asPath?.split("/")?.[1] === ""
+                    ? "border-b-4 border-solid border-orange-500"
+                    : ""
+                }
+              >
+                <Link href="/">Home</Link>
+              </div>
             </div>
-            <div className="ml-12 text-lg cursor-pointer nav-item">
-              <Link href="/about">About</Link>
+            <div className="ml-12 text-lg cursor-pointer">
+              <div
+                className={
+                  router?.asPath?.split("/")?.[1] === "about"
+                    ? "border-b-4 border-solid border-orange-500"
+                    : ""
+                }
+              >
+                <Link href="/about">About</Link>
+              </div>
             </div>
 
-            <div className="ml-12 text-lg cursor-pointer nav-item">
-              <Link href="/blog">Blog</Link>
+            <div className="ml-12 text-lg cursor-pointer">
+              <div
+                className={
+                  router?.asPath?.split("/")?.[1] === "blog" ||
+                  router?.asPath?.split("/")?.[1] === "vitamins"
+                    ? "border-b-4 border-solid border-orange-500"
+                    : ""
+                }
+              >
+                <Link href="/blog">Blog</Link>
+              </div>
             </div>
-            <div className="ml-12 text-lg cursor-pointer nav-item">
-              <Link href="/my_channel">Youtube Channel</Link>
+            <div className="ml-12 text-lg cursor-pointer">
+              <div
+                className={
+                  router?.asPath?.split("/")?.[1] === "my_channel"
+                    ? "border-b-4 border-solid border-orange-500"
+                    : ""
+                }
+              >
+                <Link href="/my_channel">Youtube Channel</Link>
+              </div>
             </div>
-            <div className="ml-12 text-lg cursor-pointer nav-item">
-              <Link href="/contact">Contact</Link>
+            <div className="ml-12 text-lg cursor-pointer">
+              <div
+                className={
+                  router?.asPath?.split("/")?.[1] === "contact"
+                    ? "border-b-4 border-solid border-orange-500"
+                    : ""
+                }
+              >
+                <Link href="/contact">Contact</Link>
+              </div>
             </div>
             <div
               className="mb-12 ml-10 text-xl cursor-pointer"
