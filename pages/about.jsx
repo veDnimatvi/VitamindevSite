@@ -112,12 +112,12 @@ const About = () => {
           </div>
           <div className="md:mx-32">
             <p className="mb-6 text-lg">
-              Tôi là Thiên, chủ nhân của blog này. Hiện đang sinh sống và làm
-              việc tại Thành phố Hà nội. Ở blog này tôi chia sẻ những gì mình
-              biết đến mọi người. Vì tôi biết cách tiếp thu kiến thức tốt nhất
-              là chia sẻ. Tôi có hơn 2 năm kinh nghiệm trong lập trình front-end
-              với đa dạng framework của javascript như ReactJS, Angular và
-              VueJS. Kiến thức về lập trình back-end với NodeJs.
+              Tôi là Thiên. Hiện đang sinh sống và làm
+              việc tại Hà nội. Đây là nơi tôi lưu trữ cũng như chia sẻ những kiến thức lập trình mình
+              biết. Vì tôi biết cách tiếp thu kiến thức tốt nhất
+              là chia sẻ. Tôi đã có 3 năm kinh nghiệm làm việc tại ví trí lập trình viên front-end
+              với đa dạng framework ReactJS, Angular và
+              VueJS và kiến thức về lập trình về back-end với NodeJs.
             </p>
 
             <p className="mb-6 text-lg">
