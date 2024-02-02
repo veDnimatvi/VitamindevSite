@@ -11,7 +11,11 @@ import Header from "../components/Header";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Head from "next/head";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 
+const Comment = dynamic(() => import("../components/CommentFacebook"), {
+  ssr: false,
+});
 function Blog(props) {
   const { data, content } = matter(props.content);
   const { scrollYProgress } = useScroll();
@@ -72,22 +76,11 @@ function Blog(props) {
           >
             {content}
           </ReactMarkdown>
-          <div id="fb-root"></div>
-          <div
-            className="fb-comments"
-            data-href="https://websitecuathien.vercel.app/"
-            data-width="100%"
-            data-numposts="5"
-          ></div>
+
+          <Comment />
         </div>
       </div>
-      <Script
-        async
-        defer
-        crossOrigin="anonymous"
-        nonce="lsbLpQlf"
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0&appId=1039695453955007"
-      />
+
       <Footer />
     </>
     // </Layout>
