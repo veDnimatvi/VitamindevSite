@@ -143,7 +143,7 @@ const MyChanel = () => {
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullscreen
+              allowFullScreen
             ></iframe>
             <div>
               <p className="my-4 text-xl font-semibold sm:mb-4 sm:mt-0">
