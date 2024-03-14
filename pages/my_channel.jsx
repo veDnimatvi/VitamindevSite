@@ -196,6 +196,39 @@ const MyChanel = () => {
               </div>
             </div>
           </div>
+
+          <div className="sm:flex p-8 gap-10 my-10 cursor-pointer shadow-[rgba(0, 0, 0, 0.35)] shadow-xl">
+            <iframe
+              className="sm:w-[560px] w-[300px]"
+              height="315"
+              src="https://www.youtube.com/embed/4CFz9UJSf7k?si=3EbJ97pc8wQOTrD0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+            <div>
+              <p className="my-4 text-xl font-semibold sm:mb-4 sm:mt-0">
+                Event Bus trong Nuxtjs sử dụng thư viện mitt.
+              </p>
+              <div className="text-sm">
+                <p>
+                  Giả quyết bài toán đồng bộ số đơn hàng trong giỏ hàng ở navbar
+                  sử dụng event bus với thư viện mitt cho dự án Nuxt.js
+                </p>
+
+                <div
+                  className="flex items-center gap-2 p-3 mt-4 text-white duration-300 ease-in-out rounded bg-stone-800 w-max hover:scale-110"
+                  onClick={() =>
+                    window.open("https://www.youtube.com/watch?v=4CFz9UJSf7k")
+                  }
+                >
+                  <Image src={youtube} alt="youtube" />
+                  <div>Xem Trên Youtube</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
