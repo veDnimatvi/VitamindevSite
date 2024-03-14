@@ -213,8 +213,8 @@ const MyChanel = () => {
               </p>
               <div className="text-sm">
                 <p>
-                  Giả quyết bài toán đồng bộ số đơn hàng trong giỏ hàng ở navbar
-                  sử dụng event bus với thư viện mitt cho dự án Nuxt.js
+                  Giải quyết bài toán đồng bộ số đơn hàng trong giỏ hàng ở
+                  navbar sử dụng event bus với thư viện mitt cho dự án Nuxt.js
                 </p>
 
                 <div
