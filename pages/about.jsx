@@ -117,7 +117,7 @@ const About = () => {
               biết. Vì tôi biết cách tiếp thu kiến thức tốt nhất
               là chia sẻ. Tôi đã có 3 năm kinh nghiệm làm việc tại ví trí lập trình viên front-end
               với đa dạng framework ReactJS, Angular và
-              VueJS và kiến thức về lập trình về back-end với NodeJs.
+              VueJS. Có kiến thức về lập trình về back-end với NodeJs và thường xuyên làm việc với NestJs framework.
             </p>
 
             <a
