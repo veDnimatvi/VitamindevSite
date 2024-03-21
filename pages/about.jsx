@@ -120,15 +120,6 @@ const About = () => {
               VueJS và kiến thức về lập trình về back-end với NodeJs.
             </p>
 
-            <p className="mb-6 text-lg">
-              Nếu bạn cần một website hãy liên hệ với tôi qua số điện thoại
-              (zalo) :{" "}
-              <a className="text-blue-500" href="tel:+84345000921">
-                0345000921
-              </a>{" "} hoặc qua Fanpage <a className="text-blue-500" href="https://www.facebook.com/vitamindev">
-                FanPage VitaminDev
-              </a>
-            </p>
             <a
               href="https://drive.google.com/file/d/1SYgDuz8MTNUVHvIKwBsqh7VxfmHUhuXJ/view?usp=sharing"
               target="_blank"
