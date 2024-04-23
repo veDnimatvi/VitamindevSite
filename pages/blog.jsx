@@ -71,7 +71,7 @@ export default function MyBlog(props) {
       <Head>
         <meta charSet="UTF-8" />
         <title>Vitamindev's Blog</title>
-        <meta name="Vitamindev's Blog" content="Vitamindev's Blog"></meta>
+        <meta name="Vitamindev Blog" content="Vitamindev's Blog"></meta>
       </Head>
       <section className="flex flex-col justify-between h-screen">
         <Header />

@@ -11,7 +11,7 @@ const MyChanel = () => {
       <Head>
         <meta charSet="UTF-8" />
         <title>Vitamindev's Chanel</title>
-        <meta name="Vitamindev's Chanel" content="Vitamindev's Chanel"></meta>
+        <meta name="Vitamindev Chanel" content="Vitamindev's Chanel"></meta>
       </Head>
       <div className="flex flex-col justify-between h-screen">
         <Header />
