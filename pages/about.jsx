@@ -117,18 +117,9 @@ const About = () => {
               biết. Vì tôi biết cách tiếp thu kiến thức tốt nhất
               là chia sẻ. Tôi đã có 3 năm kinh nghiệm làm việc tại ví trí lập trình viên front-end
               với đa dạng framework ReactJS, Angular và
-              VueJS và kiến thức về lập trình về back-end với NodeJs.
+              VueJS. Có kiến thức về lập trình về back-end với NodeJs và thường xuyên làm việc với NestJs framework.
             </p>
 
-            <p className="mb-6 text-lg">
-              Nếu bạn cần một website hãy liên hệ với tôi qua số điện thoại
-              (zalo) :{" "}
-              <a className="text-blue-500" href="tel:+84345000921">
-                0345000921
-              </a>{" "} hoặc qua Fanpage <a className="text-blue-500" href="https://www.facebook.com/vitamindev">
-                FanPage VitaminDev
-              </a>
-            </p>
             <a
               href="https://drive.google.com/file/d/1SYgDuz8MTNUVHvIKwBsqh7VxfmHUhuXJ/view?usp=sharing"
               target="_blank"
