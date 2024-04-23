@@ -4,6 +4,7 @@ import PostItem from "./components/PostItem";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const limitItems = 5;
 
@@ -66,55 +67,60 @@ export default function MyBlog(props) {
   };
 
   return (
-    // <Layout>
-    <section className="flex flex-col justify-between h-screen">
-      <Header />
+    <>
+      <Head>
+        <meta charSet="UTF-8" />
+        <title>Vitamindev's Blog</title>
+        <meta name="Vitamindev's Blog" content="Vitamindev's Blog"></meta>
+      </Head>
+      <section className="flex flex-col justify-between h-screen">
+        <Header />
 
-      <div className="mb-auto main" data-aos="fade-up">
-        <div className="container mx-auto">
-          <div className="text-4xl font-bold">All Posts</div>
-          <div className="w-32 h-1 bg-orange-300 rounded"></div>
-          <input
-            className="w-full input-search md:w-1/2"
-            type="text"
-            placeholder="Search articles"
-            onChange={(e) => searchArticle(e.target.value)}
-          />
-          <hr className="my-5" />
-        </div>
-        <PostItem listItems={isFirstLoad ? listPosts : listSearchs} />
-
-        {!keySearchs && (
-          <div className="flex justify-between mt-10 text-lg font-semibold">
-            <div
-              className={
-                currentPage === 1
-                  ? "cursor-pointer disable-div"
-                  : "cursor-pointer"
-              }
-              onClick={() => changePage(currentPage - 1)}
-            >
-              Previous
-            </div>
-            <div>
-              {currentPage} of {totalPage}
-            </div>
-            <div
-              className={
-                currentPage === totalPage
-                  ? "cursor-pointer disable-div"
-                  : "cursor-pointer"
-              }
-              onClick={() => changePage(currentPage + 1)}
-            >
-              Next
-            </div>
+        <div className="mb-auto main" data-aos="fade-up">
+          <div className="container mx-auto">
+            <div className="text-4xl font-bold">All Posts</div>
+            <div className="w-32 h-1 bg-orange-300 rounded"></div>
+            <input
+              className="w-full input-search md:w-1/2"
+              type="text"
+              placeholder="Search articles"
+              onChange={(e) => searchArticle(e.target.value)}
+            />
+            <hr className="my-5" />
           </div>
-        )}
-      </div>
-      <Footer />
-    </section>
-    // </Layout>
+          <PostItem listItems={isFirstLoad ? listPosts : listSearchs} />
+
+          {!keySearchs && (
+            <div className="flex justify-between mt-10 text-lg font-semibold">
+              <div
+                className={
+                  currentPage === 1
+                    ? "cursor-pointer disable-div"
+                    : "cursor-pointer"
+                }
+                onClick={() => changePage(currentPage - 1)}
+              >
+                Previous
+              </div>
+              <div>
+                {currentPage} of {totalPage}
+              </div>
+              <div
+                className={
+                  currentPage === totalPage
+                    ? "cursor-pointer disable-div"
+                    : "cursor-pointer"
+                }
+                onClick={() => changePage(currentPage + 1)}
+              >
+                Next
+              </div>
+            </div>
+          )}
+        </div>
+        <Footer />
+      </section>
+    </>
   );
 }
 

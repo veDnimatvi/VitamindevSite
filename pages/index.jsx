@@ -9,7 +9,6 @@ export default function MyProfile() {
       <Head>
         <meta charSet="UTF-8" />
         <title>Vitamindev</title>
-        <meta name="Vitamindev" content="Vitamindev Portfolio" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, viewport-fit=cover"
