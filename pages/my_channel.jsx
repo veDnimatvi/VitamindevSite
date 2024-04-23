@@ -3,15 +3,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import youtube from "../public/img/icons-youtube.png";
 import Image from "next/image";
-import Head from "next/head";
 
 const MyChanel = () => {
   return (
     <div className="flex flex-col justify-between h-screen">
-      <Head>
-        <title>Vitamindev's Chanel</title>
-        <meta name="Vitamindev Chanel" content="Vitamindev's Chanel" />
-      </Head>
       <Header />
       <div className="container mx-auto" data-aos="fade-up">
         <div className="mx-10 mb-20">

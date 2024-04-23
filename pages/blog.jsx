@@ -4,7 +4,6 @@ import PostItem from "./components/PostItem";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import { useRouter } from "next/router";
-import Head from "next/head";
 
 const limitItems = 5;
 
@@ -69,10 +68,6 @@ export default function MyBlog(props) {
   return (
     // <Layout>
     <section className="flex flex-col justify-between h-screen">
-      <Head>
-        <title>Vitamindev's Blog</title>
-        <meta name="Vitamindev Blog" content="Vitamindev's Blog" />
-      </Head>
       <Header />
 
       <div className="mb-auto main" data-aos="fade-up">
