@@ -10,8 +10,8 @@ const MyChanel = () => {
     <>
       <Head>
         <meta charSet="UTF-8" />
-        <title>Vitamindev's Chanel</title>
-        <meta name="Vitamindev Chanel" content="Vitamindev's Chanel"></meta>
+        <title>Vitamindev Chanel</title>
+        <meta name="Vitamindev Chanel" content="Vitamindev Chanel"></meta>
       </Head>
       <div className="flex flex-col justify-between h-screen">
         <Header />
