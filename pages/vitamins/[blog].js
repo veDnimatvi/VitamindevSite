@@ -10,7 +10,6 @@ import linkedin from "../../public/img/linkedin-30.png";
 import Header from "../components/Header";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Head from "next/head";
-import Script from "next/script";
 import dynamic from "next/dynamic";
 
 const Comment = dynamic(() => import("../components/CommentFacebook"), {
