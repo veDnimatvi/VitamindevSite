@@ -32,16 +32,16 @@ const About = () => {
       name: "ReactJs",
     },
     {
-      bg: "rgb(89, 61, 136)",
-      name: "Redux",
-    },
-    {
       bg: "rgb(0, 0, 0)",
       name: "NextJs",
     },
     {
       bg: "rgb(79, 192, 141)",
       name: "VueJs",
+    },
+    {
+      bg: "rgba(59, 158, 113, 1)",
+      name: "NuxtJs",
     },
     {
       bg: "rgb(221, 0, 49)",
@@ -66,6 +66,10 @@ const About = () => {
     {
       bg: "rgb(109, 179, 63)",
       name: "NodeJs",
+    },
+    {
+      bg: "rgb(204 65 96)",
+      name: "NestJs",
     },
     {
       bg: "rgb(0, 104, 74)",
