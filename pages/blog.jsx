@@ -4,6 +4,7 @@ import PostItem from "./components/PostItem";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const limitItems = 5;
 
@@ -30,7 +31,9 @@ export default function MyBlog(props) {
     if (asPathName?.length > 1) {
       let pageNumber = Number(asPathName?.[1]?.split("=")[1]);
       setCurrentPage(pageNumber);
-      setListPosts(listItems.slice((pageNumber - 1) * limitItems, pageNumber * limitItems));
+      setListPosts(
+        listItems.slice((pageNumber - 1) * limitItems, pageNumber * limitItems)
+      );
     } else {
       setListPosts(listItems.slice(0, limitItems));
     }
@@ -58,12 +61,18 @@ export default function MyBlog(props) {
       query: { page: page },
     });
 
-    setListPosts(backupListPosts.slice((page - 1) * limitItems, page * limitItems));
+    setListPosts(
+      backupListPosts.slice((page - 1) * limitItems, page * limitItems)
+    );
   };
 
   return (
     // <Layout>
     <section className="flex flex-col justify-between h-screen">
+      <Head>
+        <title>Vitamindev's Blog</title>
+        <meta name="Vitamindev Blog" content="Vitamindev's Blog" />
+      </Head>
       <Header />
 
       <div className="mb-auto main" data-aos="fade-up">

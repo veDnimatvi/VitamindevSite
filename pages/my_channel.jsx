@@ -3,16 +3,21 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import youtube from "../public/img/icons-youtube.png";
 import Image from "next/image";
+import Head from "next/head";
 
 const MyChanel = () => {
   return (
     <div className="flex flex-col justify-between h-screen">
+      <Head>
+        <title>Vitamindev's Chanel</title>
+        <meta name="Vitamindev Chanel" content="Vitamindev's Chanel" />
+      </Head>
       <Header />
       <div className="container mx-auto" data-aos="fade-up">
         <div className="mx-10 mb-20">
           <div className="text-4xl font-bold">Youtube Chanel</div>
           <div className="w-40 h-1 bg-orange-300 rounded"></div>
-          
+
           <div className="sm:flex p-8 gap-10 my-10 cursor-pointer shadow-[rgba(0, 0, 0, 0.35)] shadow-xl">
             <iframe
               className="sm:w-[560px] w-[300px]"
