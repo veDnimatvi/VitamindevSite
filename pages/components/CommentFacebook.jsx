@@ -14,14 +14,14 @@ const CommentsFacebook = () => {
       <div id="fb-root"></div>
       <div
         className="fb-comments"
-        data-href={`https://websitecuathien.vercel.app${router?.asPath}`}
+        data-href={`https://vitamindev.vercel.app${router?.asPath}`}
         data-numposts="10"
         data-width="100%"
       ></div>
       <div style={{ padding: "0 5px" }}>
         <div
           className="fb-like"
-          data-href={`https://websitecuathien.vercel.app${router?.asPath}`}
+          data-href={`https://vitamindev.vercel.app${router?.asPath}`}
           data-width=""
           data-layout=""
           data-action=""
