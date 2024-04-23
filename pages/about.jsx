@@ -129,7 +129,7 @@ const About = () => {
               </p>
 
               <a
-                href="https://drive.google.com/file/d/1SYgDuz8MTNUVHvIKwBsqh7VxfmHUhuXJ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1QS6Vo38BAR55vkQuxg8qw-UVvLxT56aH/view?usp=sharing"
                 target="_blank"
                 className="mb-6 text-lg text-blue-500 underline"
                 rel="noreferrer"
