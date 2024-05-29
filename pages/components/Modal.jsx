@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import bank from "../../public/img/bank.png";
+// import bank from "../../public/img/bank.png";
 import coffee from "../../public/img/icons-coffeeshop.png";
 
 const Modal = ({ show, setShowModal }) => {
@@ -19,7 +19,7 @@ const Modal = ({ show, setShowModal }) => {
         </div>
         <div className="text-lg font-semibold text-center">0404 7563 801</div>
         <div className="flex justify-center">
-          <Image width={250} height={300} src={bank} alt="bank" />
+          {/* <Image width={250} height={300} src={bank} alt="bank" /> */}
         </div>
 
         <div className="flex justify-center">
