@@ -1,56 +1,8 @@
-#index-page {
-  #blog-header {
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 3rem;
-  }
-  .blogsContainer {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: -10px;
-  }
-  .blogPost {
-    width: 25%;
-    text-align: center;
-    padding: 0 15px;
-    margin: 10px 0;
-    transition: transform 0.2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .blogPost > div {
-    background-color: #f2f2f2;
-    padding: 10px 10px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-    height: 300px;
-  }
-  .blogTitle {
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size: 1rem;
-  }
-  .date {
-    text-align: start;
-    margin-top: 20px;
-  }
-  img {
-    height: 150px;
-    width: 100%;
-  }
-  @media (max-width: 1199px) {
-    .blogPost {
-      width: 50%;
-    }
-  }
-  @media (max-width: 782px) {
-    .blogPost {
-      width: 100%;
-    }
-  }
+.blogTitle {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: #1e73be;
 }
 
 #blog-post-container {
@@ -75,24 +27,45 @@
 }
 
 .main {
-  margin: 20px auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   max-width: 1200px;
-  padding: 0 20px;
-  & .welcome {
-    font-size: 40px;
-    text-align: center;
-    font-family: "Times New Roman", Times, serif;
-  }
-}
-
-.blogs-container {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 40px;
 }
 
 .social-share {
   & img {
     cursor: pointer;
   }
+}
+
+.post-item {
+  background-color: rgb(241, 240, 240);
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.input-search {
+  border: 1px solid #e5e5e5;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  &:focus {
+    border: 2px solid rgb(6, 182, 212);
+    padding: 9px;
+  }
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: rgb(246, 74, 0);
+  transform-origin: 0%;
 }

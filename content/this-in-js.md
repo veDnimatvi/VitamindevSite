@@ -1,29 +1,23 @@
 ---
 slug: this-in-js
 title: Con trỏ This trong javascript
-description: "Thiên Nguyễn"
+category: Javascript
+description: "Tìm hiểu và học cách sử dụng con trỏ this trong Javascript"
 img: https://codelearn.io/Upload/Blog/con-tro-this-trong-javascript-63733766553.6552.jpg
 date: 12 May 2022
 ---
-
-![This in js](https://codelearn.io/Upload/Blog/con-tro-this-trong-javascript-63733766553.6552.jpg)
-
----
-
-# Con trỏ This trong javascript
-
 Từ khóa this trong js đề cập đến đối tượng mà nó thuộc về.
 
 - Trong một phương thức, this tham chiếu tới đối tượng truy cập phương thức.
 - Đứng ngoài phương thức , this tham chiếu đến đối tượng global
 
-## Lưu ý
+### Lưu ý
 
 - this trong hàm tạo là đại diện cho đối tượng sẽ được tạo
 - this trong hàm là undefined khi ở strict mode
 - Các phương thức bind() call() apply() có thể tham chiếu this tới đối tượng khác
 
-## Ví dụ trong Object
+### Ví dụ trong Object
 
 ```
 const myPhone = {
@@ -43,7 +37,7 @@ const myPhone = {
 }
 ```
 
-## Ví dụ trong 1 đối tượng
+### Ví dụ trong 1 đối tượng
 
 ```
 function Car(name, color , weight){
@@ -59,7 +53,7 @@ const mercedes = new Car('Mercedes', 'black', 400);
 console.log(mercedes.run())
 ```
 
-## Ví dụ trong handler Dom
+### Ví dụ trong handler Dom
 
 ```
 const btn = document.querySelector('button')
@@ -71,7 +65,7 @@ button.onClick = function(){
 }
 ```
 
-## Ví dụ trong Function
+### Ví dụ trong Function
 
 ```
 function myFuntion(){
@@ -103,7 +97,7 @@ function myFuntion(){
 window.myFuntion(); // this sẽ là đối tượng window
 ```
 
-## Ví dụ trong Prototype
+### Ví dụ trong Prototype
 
 ```
 function Car(name, color , weight){
@@ -124,7 +118,7 @@ const porsche = new Car('Porsche', 'blink');
 const mercedes = new Car('Mercedes', 'black');
 ```
 
-## Ví dụ trong arrow function
+### Ví dụ trong arrow function
 
 Arrow funtion không có this. Nó sẽ lấy this ở phạm vi bên ngoài gần nhất chứa nó.
 
@@ -146,5 +140,3 @@ Car.prototype.run = function () {
 const porsche = new Car('Porsche', 'blink');
 const mercedes = new Car('Mercedes', 'black');
 ```
-
-### Thank for reading and Have nice day !

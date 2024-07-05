@@ -23,6 +23,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>Vitamindev</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -33,6 +34,19 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+            rel="stylesheet"
+          ></link>
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />
