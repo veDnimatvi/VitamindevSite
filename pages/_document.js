@@ -36,8 +36,7 @@ class MyDocument extends Document {
           />
           <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
-            rel="stylesheet"
-          ></link>
+            rel="stylesheet"></link>
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
@@ -45,8 +44,10 @@ class MyDocument extends Document {
           />
           <link
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap"
-            rel="stylesheet"
-          ></link>
+            rel="stylesheet"></link>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+            rel="stylesheet"></link>
         </Head>
         <body>
           <Main />
